@@ -1,0 +1,30 @@
+{
+  "name": "webpack-kit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "wp webpack-dev-server --mode development",
+    "build": "wp --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shzgfx/webpack-kit.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shzgfx/webpack-kit/issues"
+  },
+  "homepage": "https://github.com/shzgfx/webpack-kit#readme",
+  "devDependencies": {
+    "mini-html-webpack-plugin": "^3.0.7",
+    "webpack": "^4.44.2",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-nano": "^1.0.0",
+    "webpackbar": "^4.0.0"
+  },
+  "dependencies": {}
+}
