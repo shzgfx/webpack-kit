@@ -5,17 +5,18 @@ const {
 } = require("mini-html-webpack-plugin");
 
 const WebpackBar = require('webpackbar');
+const { WebpackPluginServe } = require('webpack-plugin-serve');
 
 
 module.exports = {
     context: path.resolve(__dirname),
     devtool: 'source-map',
-    entry: './src/index.js',
+    watch: mode === 'development',
+    entry: ['./src', 'webpack-plugin-serve/client'],
     output: {
         filename: './dist/main.js',
         path: path.resolve(__dirname)
       },
-    mode: 'development',
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
         compress: true,
@@ -29,6 +30,12 @@ module.exports = {
                 title: 'Webpack demo',
             },
         }),
-        new WebpackBar()
+        new WebpackBar(),
+        new WebpackPluginServe({
+            port: process.env.PORT || 8080,
+            static: './dist',
+            liveReload: true,
+            waitForBuild: true,
+        }),
     ],
 };
