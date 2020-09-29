@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "wp --mode development",
+    "start": "nodemon --watch webpack.* --exec \"wp --mode development\"",
     "build": "wp --mode production"
   },
   "repository": {
@@ -21,7 +21,9 @@
   "homepage": "https://github.com/shzgfx/webpack-kit#readme",
   "devDependencies": {
     "mini-html-webpack-plugin": "^3.0.7",
+    "nodemon": "^2.0.4",
     "webpack": "^4.44.2",
+    "webpack-merge": "^5.1.4",
     "webpack-nano": "^1.0.0",
     "webpack-plugin-serve": "^1.0.1",
     "webpackbar": "^4.0.0"

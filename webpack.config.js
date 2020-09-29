@@ -1,41 +1,39 @@
 const path = require('path');
 const { mode } = require("webpack-nano/argv");
-const {
-    MiniHtmlWebpackPlugin
-} = require("mini-html-webpack-plugin");
+const parts = require('./webpack.parts');
+const { merge } = require('webpack-merge');
 
-const WebpackBar = require('webpackbar');
-const { WebpackPluginServe } = require('webpack-plugin-serve');
-
-
-module.exports = {
-    context: path.resolve(__dirname),
-    devtool: 'source-map',
-    watch: mode === 'development',
-    entry: ['./src', 'webpack-plugin-serve/client'],
-    output: {
-        filename: './dist/main.js',
-        path: path.resolve(__dirname)
-      },
-    devServer: {
-        contentBase: path.join(__dirname, 'dist'),
-        compress: true,
-        port: 3000,
-        host: '0.0.0.0'
-
+const commonConfig = merge([
+    {
+        context: path.resolve(__dirname),
+        devtool: 'source-map',
+        watch: mode === 'development',
+        entry: ['./src'],
+        output: {
+            filename: './dist/main.js',
+            path: path.resolve(__dirname)
+          },
     },
-    plugins: [
-        new MiniHtmlWebpackPlugin({
-            context: {
-                title: 'Webpack demo',
-            },
-        }),
-        new WebpackBar(),
-        new WebpackPluginServe({
-            port: process.env.PORT || 8080,
-            static: './dist',
-            liveReload: true,
-            waitForBuild: true,
-        }),
-    ],
+])
+
+const productionConfig = merge([]);
+
+const developmentConfig = merge([
+    {
+        entry: ['webpack-plugin-serve/client'],
+    },
+    parts.devServer(),
+])
+
+const getConfig = (mode) => {
+    switch (mode) {
+        case 'production':
+            return merge(commonConfig, productionConfig, { mode });
+        case 'development': 
+            return merge(commonConfig, developmentConfig, { mode });
+        default:
+            throw new Error(`Trying to use an unknow mode, ${mode}`)
+    }
 };
+
+module.exports = getConfig(mode);
