@@ -1,7 +1,7 @@
 const { WebpackPluginServe } = require("webpack-plugin-serve");
 
 const { MiniHtmlWebpackPlugin } = require("mini-html-webpack-plugin");
-const WebpackBar = require('webpackbar');
+//const WebpackBar = require('webpackbar');
 
 exports.devServer = () => ({
     watch: true,   
@@ -12,7 +12,7 @@ exports.devServer = () => ({
             liveReload: true,
             waitForBuild: true,
         }),
-        new WebpackBar(),
+        //new WebpackBar(),
     ],
 
 });
@@ -26,3 +26,16 @@ exports.page = ({ title }) => ({
         }),
     ],
 })
+
+exports.loadCSS = ({ include, exclude } = {} ) => ({
+    module: {
+        rules: [
+            { 
+                test: /\.css$/,
+                include,
+                exclude,
+                use: ['style-loader', 'css-loader'],
+            }
+        ],
+    },
+});

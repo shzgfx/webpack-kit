@@ -13,7 +13,7 @@
 /******/ 	function hotDownloadUpdateChunk(chunkId) {
 /******/ 		var script = document.createElement("script");
 /******/ 		script.charset = "utf-8";
-/******/ 		script.src = __webpack_require__.p + "ecb23d8-" + chunkId + "-wps-hmr.js";
+/******/ 		script.src = __webpack_require__.p + "12aa7db-" + chunkId + "-wps-hmr.js";
 /******/ 		if (null) script.crossOrigin = null;
 /******/ 		document.head.appendChild(script);
 /******/ 	}
@@ -27,7 +27,7 @@
 /******/ 			}
 /******/ 			try {
 /******/ 				var request = new XMLHttpRequest();
-/******/ 				var requestPath = __webpack_require__.p + "ecb23d8-wps-hmr.json";
+/******/ 				var requestPath = __webpack_require__.p + "12aa7db-wps-hmr.json";
 /******/ 				request.open("GET", requestPath, true);
 /******/ 				request.timeout = requestTimeout;
 /******/ 				request.send(null);
@@ -63,7 +63,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "7917f0a4ed42b8e57ad0";
+/******/ 	var hotCurrentHash = "682355d918e8e14092d3";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -859,6 +859,42 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./node_modules/css-loader/dist/cjs.js!./src/main.css":
+/*!************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./src/main.css ***!
+  \************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);\n// Imports\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(false);\n// Module\n___CSS_LOADER_EXPORT___.push([module.i, \"body {\\r\\n    background:green;\\r\\n}\", \"\"]);\n// Exports\n/* harmony default export */ __webpack_exports__[\"default\"] = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack:///./src/main.css?./node_modules/css-loader/dist/cjs.js");
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/runtime/api.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/css-loader/dist/runtime/api.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\n/*\n  MIT License http://www.opensource.org/licenses/mit-license.php\n  Author Tobias Koppers @sokra\n*/\n// css base code, injected by the css-loader\n// eslint-disable-next-line func-names\nmodule.exports = function (useSourceMap) {\n  var list = []; // return the list of modules as css string\n\n  list.toString = function toString() {\n    return this.map(function (item) {\n      var content = cssWithMappingToString(item, useSourceMap);\n\n      if (item[2]) {\n        return \"@media \".concat(item[2], \" {\").concat(content, \"}\");\n      }\n\n      return content;\n    }).join('');\n  }; // import a list of modules into the list\n  // eslint-disable-next-line func-names\n\n\n  list.i = function (modules, mediaQuery, dedupe) {\n    if (typeof modules === 'string') {\n      // eslint-disable-next-line no-param-reassign\n      modules = [[null, modules, '']];\n    }\n\n    var alreadyImportedModules = {};\n\n    if (dedupe) {\n      for (var i = 0; i < this.length; i++) {\n        // eslint-disable-next-line prefer-destructuring\n        var id = this[i][0];\n\n        if (id != null) {\n          alreadyImportedModules[id] = true;\n        }\n      }\n    }\n\n    for (var _i = 0; _i < modules.length; _i++) {\n      var item = [].concat(modules[_i]);\n\n      if (dedupe && alreadyImportedModules[item[0]]) {\n        // eslint-disable-next-line no-continue\n        continue;\n      }\n\n      if (mediaQuery) {\n        if (!item[2]) {\n          item[2] = mediaQuery;\n        } else {\n          item[2] = \"\".concat(mediaQuery, \" and \").concat(item[2]);\n        }\n      }\n\n      list.push(item);\n    }\n  };\n\n  return list;\n};\n\nfunction cssWithMappingToString(item, useSourceMap) {\n  var content = item[1] || ''; // eslint-disable-next-line prefer-destructuring\n\n  var cssMapping = item[3];\n\n  if (!cssMapping) {\n    return content;\n  }\n\n  if (useSourceMap && typeof btoa === 'function') {\n    var sourceMapping = toComment(cssMapping);\n    var sourceURLs = cssMapping.sources.map(function (source) {\n      return \"/*# sourceURL=\".concat(cssMapping.sourceRoot || '').concat(source, \" */\");\n    });\n    return [content].concat(sourceURLs).concat([sourceMapping]).join('\\n');\n  }\n\n  return [content].join('\\n');\n} // Adapted from convert-source-map (MIT)\n\n\nfunction toComment(sourceMap) {\n  // eslint-disable-next-line no-undef\n  var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));\n  var data = \"sourceMappingURL=data:application/json;charset=utf-8;base64,\".concat(base64);\n  return \"/*# \".concat(data, \" */\");\n}\n\n//# sourceURL=webpack:///./node_modules/css-loader/dist/runtime/api.js?");
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js":
+/*!****************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js ***!
+  \****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nvar isOldIE = function isOldIE() {\n  var memo;\n  return function memorize() {\n    if (typeof memo === 'undefined') {\n      // Test for IE <= 9 as proposed by Browserhacks\n      // @see http://browserhacks.com/#hack-e71d8692f65334173fee715c222cb805\n      // Tests for existence of standard globals is to allow style-loader\n      // to operate correctly into non-standard environments\n      // @see https://github.com/webpack-contrib/style-loader/issues/177\n      memo = Boolean(window && document && document.all && !window.atob);\n    }\n\n    return memo;\n  };\n}();\n\nvar getTarget = function getTarget() {\n  var memo = {};\n  return function memorize(target) {\n    if (typeof memo[target] === 'undefined') {\n      var styleTarget = document.querySelector(target); // Special case to return head of iframe instead of iframe itself\n\n      if (window.HTMLIFrameElement && styleTarget instanceof window.HTMLIFrameElement) {\n        try {\n          // This will throw an exception if access to iframe is blocked\n          // due to cross-origin restrictions\n          styleTarget = styleTarget.contentDocument.head;\n        } catch (e) {\n          // istanbul ignore next\n          styleTarget = null;\n        }\n      }\n\n      memo[target] = styleTarget;\n    }\n\n    return memo[target];\n  };\n}();\n\nvar stylesInDom = [];\n\nfunction getIndexByIdentifier(identifier) {\n  var result = -1;\n\n  for (var i = 0; i < stylesInDom.length; i++) {\n    if (stylesInDom[i].identifier === identifier) {\n      result = i;\n      break;\n    }\n  }\n\n  return result;\n}\n\nfunction modulesToDom(list, options) {\n  var idCountMap = {};\n  var identifiers = [];\n\n  for (var i = 0; i < list.length; i++) {\n    var item = list[i];\n    var id = options.base ? item[0] + options.base : item[0];\n    var count = idCountMap[id] || 0;\n    var identifier = \"\".concat(id, \" \").concat(count);\n    idCountMap[id] = count + 1;\n    var index = getIndexByIdentifier(identifier);\n    var obj = {\n      css: item[1],\n      media: item[2],\n      sourceMap: item[3]\n    };\n\n    if (index !== -1) {\n      stylesInDom[index].references++;\n      stylesInDom[index].updater(obj);\n    } else {\n      stylesInDom.push({\n        identifier: identifier,\n        updater: addStyle(obj, options),\n        references: 1\n      });\n    }\n\n    identifiers.push(identifier);\n  }\n\n  return identifiers;\n}\n\nfunction insertStyleElement(options) {\n  var style = document.createElement('style');\n  var attributes = options.attributes || {};\n\n  if (typeof attributes.nonce === 'undefined') {\n    var nonce =  true ? __webpack_require__.nc : undefined;\n\n    if (nonce) {\n      attributes.nonce = nonce;\n    }\n  }\n\n  Object.keys(attributes).forEach(function (key) {\n    style.setAttribute(key, attributes[key]);\n  });\n\n  if (typeof options.insert === 'function') {\n    options.insert(style);\n  } else {\n    var target = getTarget(options.insert || 'head');\n\n    if (!target) {\n      throw new Error(\"Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid.\");\n    }\n\n    target.appendChild(style);\n  }\n\n  return style;\n}\n\nfunction removeStyleElement(style) {\n  // istanbul ignore if\n  if (style.parentNode === null) {\n    return false;\n  }\n\n  style.parentNode.removeChild(style);\n}\n/* istanbul ignore next  */\n\n\nvar replaceText = function replaceText() {\n  var textStore = [];\n  return function replace(index, replacement) {\n    textStore[index] = replacement;\n    return textStore.filter(Boolean).join('\\n');\n  };\n}();\n\nfunction applyToSingletonTag(style, index, remove, obj) {\n  var css = remove ? '' : obj.media ? \"@media \".concat(obj.media, \" {\").concat(obj.css, \"}\") : obj.css; // For old IE\n\n  /* istanbul ignore if  */\n\n  if (style.styleSheet) {\n    style.styleSheet.cssText = replaceText(index, css);\n  } else {\n    var cssNode = document.createTextNode(css);\n    var childNodes = style.childNodes;\n\n    if (childNodes[index]) {\n      style.removeChild(childNodes[index]);\n    }\n\n    if (childNodes.length) {\n      style.insertBefore(cssNode, childNodes[index]);\n    } else {\n      style.appendChild(cssNode);\n    }\n  }\n}\n\nfunction applyToTag(style, options, obj) {\n  var css = obj.css;\n  var media = obj.media;\n  var sourceMap = obj.sourceMap;\n\n  if (media) {\n    style.setAttribute('media', media);\n  } else {\n    style.removeAttribute('media');\n  }\n\n  if (sourceMap && btoa) {\n    css += \"\\n/*# sourceMappingURL=data:application/json;base64,\".concat(btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))), \" */\");\n  } // For old IE\n\n  /* istanbul ignore if  */\n\n\n  if (style.styleSheet) {\n    style.styleSheet.cssText = css;\n  } else {\n    while (style.firstChild) {\n      style.removeChild(style.firstChild);\n    }\n\n    style.appendChild(document.createTextNode(css));\n  }\n}\n\nvar singleton = null;\nvar singletonCounter = 0;\n\nfunction addStyle(obj, options) {\n  var style;\n  var update;\n  var remove;\n\n  if (options.singleton) {\n    var styleIndex = singletonCounter++;\n    style = singleton || (singleton = insertStyleElement(options));\n    update = applyToSingletonTag.bind(null, style, styleIndex, false);\n    remove = applyToSingletonTag.bind(null, style, styleIndex, true);\n  } else {\n    style = insertStyleElement(options);\n    update = applyToTag.bind(null, style, options);\n\n    remove = function remove() {\n      removeStyleElement(style);\n    };\n  }\n\n  update(obj);\n  return function updateStyle(newObj) {\n    if (newObj) {\n      if (newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap) {\n        return;\n      }\n\n      update(obj = newObj);\n    } else {\n      remove();\n    }\n  };\n}\n\nmodule.exports = function (list, options) {\n  options = options || {}; // Force single-tag solution on IE6-9, which has a hard limit on the # of <style>\n  // tags it will allow on a page\n\n  if (!options.singleton && typeof options.singleton !== 'boolean') {\n    options.singleton = isOldIE();\n  }\n\n  list = list || [];\n  var lastIdentifiers = modulesToDom(list, options);\n  return function update(newList) {\n    newList = newList || [];\n\n    if (Object.prototype.toString.call(newList) !== '[object Array]') {\n      return;\n    }\n\n    for (var i = 0; i < lastIdentifiers.length; i++) {\n      var identifier = lastIdentifiers[i];\n      var index = getIndexByIdentifier(identifier);\n      stylesInDom[index].references--;\n    }\n\n    var newLastIdentifiers = modulesToDom(newList, options);\n\n    for (var _i = 0; _i < lastIdentifiers.length; _i++) {\n      var _identifier = lastIdentifiers[_i];\n\n      var _index = getIndexByIdentifier(_identifier);\n\n      if (stylesInDom[_index].references === 0) {\n        stylesInDom[_index].updater();\n\n        stylesInDom.splice(_index, 1);\n      }\n    }\n\n    lastIdentifiers = newLastIdentifiers;\n  };\n};\n\n//# sourceURL=webpack:///./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js?");
+
+/***/ }),
+
 /***/ "./node_modules/webpack-plugin-serve/client.js":
 /*!****************************************!*\
   !*** (webpack)-plugin-serve/client.js ***!
@@ -866,43 +902,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-/*
-  Copyright © 2018 Andrew Powell
-
-  This Source Code Form is subject to the terms of the Mozilla Public
-  License, v. 2.0. If a copy of the MPL was not distributed with this
-  file, You can obtain one at http://mozilla.org/MPL/2.0/.
-
-  The above copyright notice and this permission notice shall be
-  included in all copies or substantial portions of this Source Code Form.
-*/
-
-/**
- * @note This file exists merely as an easy reference for folks adding it to their configuration entries
- */
-
-(() => {
-  /* eslint-disable global-require */
-  const { run } = __webpack_require__(/*! ./lib/client/client */ "./node_modules/webpack-plugin-serve/lib/client/client.js");
-  let hash = '<unknown>';
-  let options;
-  try {
-    options = {"compress":null,"headers":null,"historyFallback":false,"hmr":true,"host":null,"liveReload":true,"log":{"level":"info","prefix":{"template":"{{level}}"},"name":"webpack-plugin-serve"},"open":false,"port":3000,"progress":true,"ramdisk":false,"secure":false,"static":"./dist","status":true,"waitForBuild":true,"address":"[::]:3000","compilerName":null,"wpsId":"ecb23d8"};
-  } catch (e) {
-    const { log } = __webpack_require__(/*! ./lib/client/log */ "./node_modules/webpack-plugin-serve/lib/client/log.js");
-    log.error(
-      'The entry for webpack-plugin-serve was included in your build, but it does not appear that the plugin was. Please check your configuration.'
-    );
-  }
-
-  try {
-    // eslint-disable-next-line camelcase
-    hash = __webpack_require__.h();
-  } catch (e) {} // eslint-disable-line no-empty
-
-  run(hash, options);
-})();
-
+eval("/*\n  Copyright © 2018 Andrew Powell\n\n  This Source Code Form is subject to the terms of the Mozilla Public\n  License, v. 2.0. If a copy of the MPL was not distributed with this\n  file, You can obtain one at http://mozilla.org/MPL/2.0/.\n\n  The above copyright notice and this permission notice shall be\n  included in all copies or substantial portions of this Source Code Form.\n*/\n\n/**\n * @note This file exists merely as an easy reference for folks adding it to their configuration entries\n */\n\n(() => {\n  /* eslint-disable global-require */\n  const { run } = __webpack_require__(/*! ./lib/client/client */ \"./node_modules/webpack-plugin-serve/lib/client/client.js\");\n  let hash = '<unknown>';\n  let options;\n  try {\n    options = {\"compress\":null,\"headers\":null,\"historyFallback\":false,\"hmr\":true,\"host\":null,\"liveReload\":true,\"log\":{\"level\":\"info\",\"prefix\":{\"template\":\"{{level}}\"},\"name\":\"webpack-plugin-serve\"},\"open\":false,\"port\":3000,\"progress\":true,\"ramdisk\":false,\"secure\":false,\"static\":\"./dist\",\"status\":true,\"waitForBuild\":true,\"address\":\"[::]:3000\",\"compilerName\":null,\"wpsId\":\"12aa7db\"};\n  } catch (e) {\n    const { log } = __webpack_require__(/*! ./lib/client/log */ \"./node_modules/webpack-plugin-serve/lib/client/log.js\");\n    log.error(\n      'The entry for webpack-plugin-serve was included in your build, but it does not appear that the plugin was. Please check your configuration.'\n    );\n  }\n\n  try {\n    // eslint-disable-next-line camelcase\n    hash = __webpack_require__.h();\n  } catch (e) {} // eslint-disable-line no-empty\n\n  run(hash, options);\n})();\n\n\n//# sourceURL=webpack:///(webpack)-plugin-serve/client.js?");
 
 /***/ }),
 
@@ -913,103 +913,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-/*
-  Copyright © 2018 Andrew Powell
-
-  This Source Code Form is subject to the terms of the Mozilla Public
-  License, v. 2.0. If a copy of the MPL was not distributed with this
-  file, You can obtain one at http://mozilla.org/MPL/2.0/.
-
-  The above copyright notice and this permission notice shall be
-  included in all copies or substantial portions of this Source Code Form.
-*/
-const { error, refresh, warn } = __webpack_require__(/*! ./log */ "./node_modules/webpack-plugin-serve/lib/client/log.js")();
-
-// ignore 1008 (HTTP 400 equivalent) and 1011 (HTTP 500 equivalent)
-const ignoreCodes = [1008, 1011];
-const maxAttempts = 10;
-
-class ClientSocket {
-  constructor(options, ...args) {
-    this.args = args;
-    this.attempts = 0;
-    this.eventHandlers = [];
-    this.options = options;
-    this.retrying = false;
-
-    this.connect();
-  }
-
-  addEventListener(...args) {
-    this.eventHandlers.push(args);
-    this.socket.addEventListener(...args);
-  }
-
-  close() {
-    this.socket.close();
-  }
-
-  connect() {
-    if (this.socket) {
-      delete this.socket;
-    }
-
-    this.connecting = true;
-
-    this.socket = new WebSocket(...this.args);
-
-    if (this.options.retry) {
-      this.socket.addEventListener('close', (event) => {
-        if (ignoreCodes.includes(event.code)) {
-          return;
-        }
-
-        if (!this.retrying) {
-          warn(`The WebSocket was closed and will attempt to reconnect`);
-        }
-
-        this.reconnect();
-      });
-    } else {
-      this.socket.onclose = () => warn(`The client WebSocket was closed. ${refresh}`);
-    }
-
-    this.socket.addEventListener('open', () => {
-      this.attempts = 0;
-      this.retrying = false;
-    });
-
-    if (this.eventHandlers.length) {
-      for (const [name, fn] of this.eventHandlers) {
-        this.socket.addEventListener(name, fn);
-      }
-    }
-  }
-
-  reconnect() {
-    this.attempts += 1;
-    this.retrying = true;
-
-    if (this.attempts > maxAttempts) {
-      error(`The WebSocket could not be reconnected. ${refresh}`);
-      this.retrying = false;
-      return;
-    }
-
-    const timeout = 1000 * this.attempts ** 2;
-
-    setTimeout(() => this.connect(this.args), timeout);
-  }
-
-  removeEventListener(...args) {
-    const [, handler] = args;
-    this.eventHandlers = this.eventHandlers.filter(([, fn]) => fn === handler);
-    this.socket.removeEventListener(...args);
-  }
-}
-
-module.exports = { ClientSocket };
-
+eval("/*\n  Copyright © 2018 Andrew Powell\n\n  This Source Code Form is subject to the terms of the Mozilla Public\n  License, v. 2.0. If a copy of the MPL was not distributed with this\n  file, You can obtain one at http://mozilla.org/MPL/2.0/.\n\n  The above copyright notice and this permission notice shall be\n  included in all copies or substantial portions of this Source Code Form.\n*/\nconst { error, refresh, warn } = __webpack_require__(/*! ./log */ \"./node_modules/webpack-plugin-serve/lib/client/log.js\")();\n\n// ignore 1008 (HTTP 400 equivalent) and 1011 (HTTP 500 equivalent)\nconst ignoreCodes = [1008, 1011];\nconst maxAttempts = 10;\n\nclass ClientSocket {\n  constructor(options, ...args) {\n    this.args = args;\n    this.attempts = 0;\n    this.eventHandlers = [];\n    this.options = options;\n    this.retrying = false;\n\n    this.connect();\n  }\n\n  addEventListener(...args) {\n    this.eventHandlers.push(args);\n    this.socket.addEventListener(...args);\n  }\n\n  close() {\n    this.socket.close();\n  }\n\n  connect() {\n    if (this.socket) {\n      delete this.socket;\n    }\n\n    this.connecting = true;\n\n    this.socket = new WebSocket(...this.args);\n\n    if (this.options.retry) {\n      this.socket.addEventListener('close', (event) => {\n        if (ignoreCodes.includes(event.code)) {\n          return;\n        }\n\n        if (!this.retrying) {\n          warn(`The WebSocket was closed and will attempt to reconnect`);\n        }\n\n        this.reconnect();\n      });\n    } else {\n      this.socket.onclose = () => warn(`The client WebSocket was closed. ${refresh}`);\n    }\n\n    this.socket.addEventListener('open', () => {\n      this.attempts = 0;\n      this.retrying = false;\n    });\n\n    if (this.eventHandlers.length) {\n      for (const [name, fn] of this.eventHandlers) {\n        this.socket.addEventListener(name, fn);\n      }\n    }\n  }\n\n  reconnect() {\n    this.attempts += 1;\n    this.retrying = true;\n\n    if (this.attempts > maxAttempts) {\n      error(`The WebSocket could not be reconnected. ${refresh}`);\n      this.retrying = false;\n      return;\n    }\n\n    const timeout = 1000 * this.attempts ** 2;\n\n    setTimeout(() => this.connect(this.args), timeout);\n  }\n\n  removeEventListener(...args) {\n    const [, handler] = args;\n    this.eventHandlers = this.eventHandlers.filter(([, fn]) => fn === handler);\n    this.socket.removeEventListener(...args);\n  }\n}\n\nmodule.exports = { ClientSocket };\n\n\n//# sourceURL=webpack:///(webpack)-plugin-serve/lib/client/ClientSocket.js?");
 
 /***/ }),
 
@@ -1020,110 +924,7 @@ module.exports = { ClientSocket };
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-/*
-  Copyright © 2018 Andrew Powell
-
-  This Source Code Form is subject to the terms of the Mozilla Public
-  License, v. 2.0. If a copy of the MPL was not distributed with this
-  file, You can obtain one at http://mozilla.org/MPL/2.0/.
-
-  The above copyright notice and this permission notice shall be
-  included in all copies or substantial portions of this Source Code Form.
-*/
-/* eslint-disable global-require */
-const run = (buildHash, options) => {
-  const { address, client = {}, progress, secure, status } = options;
-
-  options.firstInstance = !window.webpackPluginServe; // eslint-disable-line no-param-reassign
-
-  window.webpackPluginServe = window.webpackPluginServe || {
-    compilers: {}
-  };
-  window.webpackPluginServe.silent = !!client.silent;
-
-  const { ClientSocket } = __webpack_require__(/*! ./ClientSocket */ "./node_modules/webpack-plugin-serve/lib/client/ClientSocket.js");
-  const { replace } = __webpack_require__(/*! ./hmr */ "./node_modules/webpack-plugin-serve/lib/client/hmr.js");
-  const { error, info, warn } = __webpack_require__(/*! ./log */ "./node_modules/webpack-plugin-serve/lib/client/log.js")();
-
-  const protocol = secure ? 'wss' : 'ws';
-  const socket = new ClientSocket(client, `${protocol}://${client.address || address}/wps`);
-
-  const { compilerName } = options;
-
-  window.webpackPluginServe.compilers[compilerName] = {};
-
-  // prevents ECONNRESET errors on the server
-  window.addEventListener('beforeunload', () => socket.close());
-
-  socket.addEventListener('message', (message) => {
-    const { action, data = {} } = JSON.parse(message.data);
-    const { errors, hash = '<?>', warnings } = data || {};
-    const shortHash = hash.slice(0, 7);
-    const identifier = options.compilerName ? `(Compiler: ${options.compilerName}) ` : '';
-    const compiler = window.webpackPluginServe.compilers[compilerName];
-    const { wpsId } = data;
-
-    switch (action) {
-      case 'build':
-        compiler.done = false;
-        break;
-      case 'connected':
-        info(`WebSocket connected ${identifier}`);
-        break;
-      case 'done':
-        compiler.done = true;
-        break;
-      case 'problems':
-        if (data.errors.length) {
-          error(`${identifier}Build ${shortHash} produced errors:\n`, errors);
-        }
-        if (data.warnings.length) {
-          warn(`${identifier}Build ${shortHash} produced warnings:\n`, warnings);
-        }
-        break;
-      case 'reload':
-        window.location.reload();
-        break;
-      case 'replace':
-        // actions with a wpsId in tow indicate actions that should only be executed when the wpsId sent
-        // matches the wpsId set in options. this is how we can identify multiple compilers in the
-        // client.
-        if (wpsId && wpsId === options.wpsId) {
-          replace(buildHash, hash);
-        }
-        break;
-      default:
-    }
-  });
-
-  if (options.firstInstance) {
-    if (progress === 'minimal') {
-      const { init } = __webpack_require__(/*! ./overlays/progress-minimal */ "./node_modules/webpack-plugin-serve/lib/client/overlays/progress-minimal.js");
-      init(options, socket);
-    } else if (progress) {
-      const { init } = __webpack_require__(/*! ./overlays/progress */ "./node_modules/webpack-plugin-serve/lib/client/overlays/progress.js");
-      init(options, socket);
-    }
-
-    if (status) {
-      const { init } = __webpack_require__(/*! ./overlays/status */ "./node_modules/webpack-plugin-serve/lib/client/overlays/status.js");
-      init(options, socket);
-    }
-
-    if (true) {
-      info('Hot Module Replacement is active');
-
-      if (options.liveReload) {
-        info('Live Reload taking precedence over Hot Module Replacement');
-      }
-    } else {}
-
-    if (false) {}
-  }
-};
-
-module.exports = { run };
-
+eval("/*\n  Copyright © 2018 Andrew Powell\n\n  This Source Code Form is subject to the terms of the Mozilla Public\n  License, v. 2.0. If a copy of the MPL was not distributed with this\n  file, You can obtain one at http://mozilla.org/MPL/2.0/.\n\n  The above copyright notice and this permission notice shall be\n  included in all copies or substantial portions of this Source Code Form.\n*/\n/* eslint-disable global-require */\nconst run = (buildHash, options) => {\n  const { address, client = {}, progress, secure, status } = options;\n\n  options.firstInstance = !window.webpackPluginServe; // eslint-disable-line no-param-reassign\n\n  window.webpackPluginServe = window.webpackPluginServe || {\n    compilers: {}\n  };\n  window.webpackPluginServe.silent = !!client.silent;\n\n  const { ClientSocket } = __webpack_require__(/*! ./ClientSocket */ \"./node_modules/webpack-plugin-serve/lib/client/ClientSocket.js\");\n  const { replace } = __webpack_require__(/*! ./hmr */ \"./node_modules/webpack-plugin-serve/lib/client/hmr.js\");\n  const { error, info, warn } = __webpack_require__(/*! ./log */ \"./node_modules/webpack-plugin-serve/lib/client/log.js\")();\n\n  const protocol = secure ? 'wss' : 'ws';\n  const socket = new ClientSocket(client, `${protocol}://${client.address || address}/wps`);\n\n  const { compilerName } = options;\n\n  window.webpackPluginServe.compilers[compilerName] = {};\n\n  // prevents ECONNRESET errors on the server\n  window.addEventListener('beforeunload', () => socket.close());\n\n  socket.addEventListener('message', (message) => {\n    const { action, data = {} } = JSON.parse(message.data);\n    const { errors, hash = '<?>', warnings } = data || {};\n    const shortHash = hash.slice(0, 7);\n    const identifier = options.compilerName ? `(Compiler: ${options.compilerName}) ` : '';\n    const compiler = window.webpackPluginServe.compilers[compilerName];\n    const { wpsId } = data;\n\n    switch (action) {\n      case 'build':\n        compiler.done = false;\n        break;\n      case 'connected':\n        info(`WebSocket connected ${identifier}`);\n        break;\n      case 'done':\n        compiler.done = true;\n        break;\n      case 'problems':\n        if (data.errors.length) {\n          error(`${identifier}Build ${shortHash} produced errors:\\n`, errors);\n        }\n        if (data.warnings.length) {\n          warn(`${identifier}Build ${shortHash} produced warnings:\\n`, warnings);\n        }\n        break;\n      case 'reload':\n        window.location.reload();\n        break;\n      case 'replace':\n        // actions with a wpsId in tow indicate actions that should only be executed when the wpsId sent\n        // matches the wpsId set in options. this is how we can identify multiple compilers in the\n        // client.\n        if (wpsId && wpsId === options.wpsId) {\n          replace(buildHash, hash);\n        }\n        break;\n      default:\n    }\n  });\n\n  if (options.firstInstance) {\n    if (progress === 'minimal') {\n      const { init } = __webpack_require__(/*! ./overlays/progress-minimal */ \"./node_modules/webpack-plugin-serve/lib/client/overlays/progress-minimal.js\");\n      init(options, socket);\n    } else if (progress) {\n      const { init } = __webpack_require__(/*! ./overlays/progress */ \"./node_modules/webpack-plugin-serve/lib/client/overlays/progress.js\");\n      init(options, socket);\n    }\n\n    if (status) {\n      const { init } = __webpack_require__(/*! ./overlays/status */ \"./node_modules/webpack-plugin-serve/lib/client/overlays/status.js\");\n      init(options, socket);\n    }\n\n    if (true) {\n      info('Hot Module Replacement is active');\n\n      if (options.liveReload) {\n        info('Live Reload taking precedence over Hot Module Replacement');\n      }\n    } else {}\n\n    if (false) {}\n  }\n};\n\nmodule.exports = { run };\n\n\n//# sourceURL=webpack:///(webpack)-plugin-serve/lib/client/client.js?");
 
 /***/ }),
 
@@ -1134,76 +935,7 @@ module.exports = { run };
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-/*
-  Copyright © 2018 Andrew Powell
-
-  This Source Code Form is subject to the terms of the Mozilla Public
-  License, v. 2.0. If a copy of the MPL was not distributed with this
-  file, You can obtain one at http://mozilla.org/MPL/2.0/.
-
-  The above copyright notice and this permission notice shall be
-  included in all copies or substantial portions of this Source Code Form.
-*/
-const { error, info, refresh, warn } = __webpack_require__(/*! ./log */ "./node_modules/webpack-plugin-serve/lib/client/log.js")();
-
-let latest = true;
-
-const hmr = {
-  onUnaccepted(data) {
-    warn('Change in unaccepted module(s):\n', data);
-    warn(data);
-  },
-  onDeclined(data) {
-    warn('Change in declined module(s):\n', data);
-  },
-  onErrored(data) {
-    error('Error in module(s):\n', data);
-  }
-};
-
-const replace = async (buildHash, hash) => {
-  const { apply, check, status } = module.hot;
-
-  if (hash) {
-    // eslint-disable-next-line no-undef
-    latest = hash.includes(buildHash);
-  }
-
-  if (!latest) {
-    const hmrStatus = status();
-
-    if (hmrStatus === 'abort' || hmrStatus === 'fail') {
-      warn(`An HMR update was triggered, but ${hmrStatus}ed. ${refresh}`);
-      return;
-    }
-
-    let modules;
-
-    try {
-      modules = await check(false);
-    } catch (e) {
-      // noop. this typically happens when a MultiCompiler has more than one compiler that includes
-      // this script, and an update happens with a hash that isn't part of the compiler/module this
-      // instance was loaded for.
-      return;
-    }
-
-    if (!modules) {
-      warn(`No modules found for replacement. ${refresh}`);
-      return;
-    }
-
-    modules = await apply(hmr);
-
-    if (modules) {
-      latest = true;
-      info(`Build ${hash.slice(0, 7)} replaced:\n`, modules);
-    }
-  }
-};
-
-module.exports = { replace };
-
+eval("/*\n  Copyright © 2018 Andrew Powell\n\n  This Source Code Form is subject to the terms of the Mozilla Public\n  License, v. 2.0. If a copy of the MPL was not distributed with this\n  file, You can obtain one at http://mozilla.org/MPL/2.0/.\n\n  The above copyright notice and this permission notice shall be\n  included in all copies or substantial portions of this Source Code Form.\n*/\nconst { error, info, refresh, warn } = __webpack_require__(/*! ./log */ \"./node_modules/webpack-plugin-serve/lib/client/log.js\")();\n\nlet latest = true;\n\nconst hmr = {\n  onUnaccepted(data) {\n    warn('Change in unaccepted module(s):\\n', data);\n    warn(data);\n  },\n  onDeclined(data) {\n    warn('Change in declined module(s):\\n', data);\n  },\n  onErrored(data) {\n    error('Error in module(s):\\n', data);\n  }\n};\n\nconst replace = async (buildHash, hash) => {\n  const { apply, check, status } = module.hot;\n\n  if (hash) {\n    // eslint-disable-next-line no-undef\n    latest = hash.includes(buildHash);\n  }\n\n  if (!latest) {\n    const hmrStatus = status();\n\n    if (hmrStatus === 'abort' || hmrStatus === 'fail') {\n      warn(`An HMR update was triggered, but ${hmrStatus}ed. ${refresh}`);\n      return;\n    }\n\n    let modules;\n\n    try {\n      modules = await check(false);\n    } catch (e) {\n      // noop. this typically happens when a MultiCompiler has more than one compiler that includes\n      // this script, and an update happens with a hash that isn't part of the compiler/module this\n      // instance was loaded for.\n      return;\n    }\n\n    if (!modules) {\n      warn(`No modules found for replacement. ${refresh}`);\n      return;\n    }\n\n    modules = await apply(hmr);\n\n    if (modules) {\n      latest = true;\n      info(`Build ${hash.slice(0, 7)} replaced:\\n`, modules);\n    }\n  }\n};\n\nmodule.exports = { replace };\n\n\n//# sourceURL=webpack:///(webpack)-plugin-serve/lib/client/hmr.js?");
 
 /***/ }),
 
@@ -1214,32 +946,7 @@ module.exports = { replace };
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-/*
-  Copyright © 2018 Andrew Powell
-
-  This Source Code Form is subject to the terms of the Mozilla Public
-  License, v. 2.0. If a copy of the MPL was not distributed with this
-  file, You can obtain one at http://mozilla.org/MPL/2.0/.
-
-  The above copyright notice and this permission notice shall be
-  included in all copies or substantial portions of this Source Code Form.
-*/
-const { error, info, warn } = console;
-const log = {
-  error: error.bind(console, '⬡ wps:'),
-  info: info.bind(console, '⬡ wps:'),
-  refresh: 'Please refresh the page',
-  warn: warn.bind(console, '⬡ wps:')
-};
-const noop = () => {};
-const silent = {
-  error: noop,
-  info: noop,
-  warn: noop
-};
-
-module.exports = () => (window.webpackPluginServe.silent ? silent : log);
-
+eval("/*\n  Copyright © 2018 Andrew Powell\n\n  This Source Code Form is subject to the terms of the Mozilla Public\n  License, v. 2.0. If a copy of the MPL was not distributed with this\n  file, You can obtain one at http://mozilla.org/MPL/2.0/.\n\n  The above copyright notice and this permission notice shall be\n  included in all copies or substantial portions of this Source Code Form.\n*/\nconst { error, info, warn } = console;\nconst log = {\n  error: error.bind(console, '⬡ wps:'),\n  info: info.bind(console, '⬡ wps:'),\n  refresh: 'Please refresh the page',\n  warn: warn.bind(console, '⬡ wps:')\n};\nconst noop = () => {};\nconst silent = {\n  error: noop,\n  info: noop,\n  warn: noop\n};\n\nmodule.exports = () => (window.webpackPluginServe.silent ? silent : log);\n\n\n//# sourceURL=webpack:///(webpack)-plugin-serve/lib/client/log.js?");
 
 /***/ }),
 
@@ -1250,123 +957,7 @@ module.exports = () => (window.webpackPluginServe.silent ? silent : log);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-/*
-  Copyright © 2018 Andrew Powell, Matheus Gonçalves da Silva
-
-  This Source Code Form is subject to the terms of the Mozilla Public
-  License, v. 2.0. If a copy of the MPL was not distributed with this
-  file, You can obtain one at http://mozilla.org/MPL/2.0/.
-
-  The above copyright notice and this permission notice shall be
-  included in all copies or substantial portions of this Source Code Form.
-*/
-const { addCss, addHtml } = __webpack_require__(/*! ./util */ "./node_modules/webpack-plugin-serve/lib/client/overlays/util.js");
-
-const ns = 'wps-progress-minimal';
-const html = `
-<div id="${ns}" class="${ns}-hidden">
-  <div id="${ns}-bar"></div>
-</div>
-`;
-const css = `
-#${ns} {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 4px;
-  width: 100vw;
-  z-index: 2147483645;
-}
-
-#${ns}-bar {
-  width: 0%;
-  height: 4px;
-  background-color: rgb(186, 223, 172);
-}
-
-@keyframes ${ns}-fade {
-	0% {
-		opacity: 1;
-	}
-	100% {
-		opacity: 0;
-	}
-}
-
-.${ns}-disappear {
-  animation: ${ns}-fade .3s;
-  animation-fill-mode: forwards;
-  animation-delay: .5s;
-}
-
-.${ns}-hidden {
-  display: none;
-}
-`;
-
-let hideOnPageVisible = false;
-
-const update = (percent) => {
-  const bar = document.querySelector(`#${ns}-bar`);
-  bar.style.width = `${percent}%`;
-};
-
-const reset = (wrapper) => {
-  wrapper.classList.add(`${ns}-disappear`);
-};
-
-const init = (options, socket) => {
-  if (options.firstInstance) {
-    document.addEventListener('DOMContentLoaded', () => {
-      addCss(css);
-      addHtml(html);
-
-      const wrapper = document.querySelector(`#${ns}`);
-      wrapper.addEventListener('animationend', () => {
-        update(0);
-        wrapper.classList.add(`${ns}-hidden`);
-      });
-    });
-
-    document.addEventListener('visibilitychange', () => {
-      if (!document.hidden && hideOnPageVisible) {
-        const wrapper = document.querySelector(`#${ns}`);
-        reset(wrapper);
-        hideOnPageVisible = false;
-      }
-    });
-  }
-
-  socket.addEventListener('message', (message) => {
-    const { action, data } = JSON.parse(message.data);
-
-    if (action !== 'progress') {
-      return;
-    }
-
-    const percent = Math.floor(data.percent * 100);
-    const wrapper = document.querySelector(`#${ns}`);
-
-    wrapper.classList.remove(`${ns}-hidden`, `${ns}-disappear`);
-
-    if (data.percent === 1) {
-      if (document.hidden) {
-        hideOnPageVisible = true;
-      } else {
-        reset(wrapper);
-      }
-    } else {
-      hideOnPageVisible = false;
-    }
-
-    update(percent);
-  });
-};
-
-module.exports = {
-  init
-};
-
+eval("/*\n  Copyright © 2018 Andrew Powell, Matheus Gonçalves da Silva\n\n  This Source Code Form is subject to the terms of the Mozilla Public\n  License, v. 2.0. If a copy of the MPL was not distributed with this\n  file, You can obtain one at http://mozilla.org/MPL/2.0/.\n\n  The above copyright notice and this permission notice shall be\n  included in all copies or substantial portions of this Source Code Form.\n*/\nconst { addCss, addHtml } = __webpack_require__(/*! ./util */ \"./node_modules/webpack-plugin-serve/lib/client/overlays/util.js\");\n\nconst ns = 'wps-progress-minimal';\nconst html = `\n<div id=\"${ns}\" class=\"${ns}-hidden\">\n  <div id=\"${ns}-bar\"></div>\n</div>\n`;\nconst css = `\n#${ns} {\n  position: fixed;\n  top: 0;\n  left: 0;\n  height: 4px;\n  width: 100vw;\n  z-index: 2147483645;\n}\n\n#${ns}-bar {\n  width: 0%;\n  height: 4px;\n  background-color: rgb(186, 223, 172);\n}\n\n@keyframes ${ns}-fade {\n\t0% {\n\t\topacity: 1;\n\t}\n\t100% {\n\t\topacity: 0;\n\t}\n}\n\n.${ns}-disappear {\n  animation: ${ns}-fade .3s;\n  animation-fill-mode: forwards;\n  animation-delay: .5s;\n}\n\n.${ns}-hidden {\n  display: none;\n}\n`;\n\nlet hideOnPageVisible = false;\n\nconst update = (percent) => {\n  const bar = document.querySelector(`#${ns}-bar`);\n  bar.style.width = `${percent}%`;\n};\n\nconst reset = (wrapper) => {\n  wrapper.classList.add(`${ns}-disappear`);\n};\n\nconst init = (options, socket) => {\n  if (options.firstInstance) {\n    document.addEventListener('DOMContentLoaded', () => {\n      addCss(css);\n      addHtml(html);\n\n      const wrapper = document.querySelector(`#${ns}`);\n      wrapper.addEventListener('animationend', () => {\n        update(0);\n        wrapper.classList.add(`${ns}-hidden`);\n      });\n    });\n\n    document.addEventListener('visibilitychange', () => {\n      if (!document.hidden && hideOnPageVisible) {\n        const wrapper = document.querySelector(`#${ns}`);\n        reset(wrapper);\n        hideOnPageVisible = false;\n      }\n    });\n  }\n\n  socket.addEventListener('message', (message) => {\n    const { action, data } = JSON.parse(message.data);\n\n    if (action !== 'progress') {\n      return;\n    }\n\n    const percent = Math.floor(data.percent * 100);\n    const wrapper = document.querySelector(`#${ns}`);\n\n    wrapper.classList.remove(`${ns}-hidden`, `${ns}-disappear`);\n\n    if (data.percent === 1) {\n      if (document.hidden) {\n        hideOnPageVisible = true;\n      } else {\n        reset(wrapper);\n      }\n    } else {\n      hideOnPageVisible = false;\n    }\n\n    update(percent);\n  });\n};\n\nmodule.exports = {\n  init\n};\n\n\n//# sourceURL=webpack:///(webpack)-plugin-serve/lib/client/overlays/progress-minimal.js?");
 
 /***/ }),
 
@@ -1377,177 +968,7 @@ module.exports = {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-/*
-  Copyright © 2018 Andrew Powell, Matheus Gonçalves da Silva
-
-  This Source Code Form is subject to the terms of the Mozilla Public
-  License, v. 2.0. If a copy of the MPL was not distributed with this
-  file, You can obtain one at http://mozilla.org/MPL/2.0/.
-
-  The above copyright notice and this permission notice shall be
-  included in all copies or substantial portions of this Source Code Form.
-*/
-const { addCss, addHtml } = __webpack_require__(/*! ./util */ "./node_modules/webpack-plugin-serve/lib/client/overlays/util.js");
-
-const ns = 'wps-progress';
-const css = `
-#${ns}{
-  width: 200px;
-  height: 200px;
-  position: fixed;
-  right: 5%;
-  top: 5%;
-  transition: opacity .25s ease-in-out;
-  z-index: 2147483645;
-}
-
-#${ns}-bg {
-  fill: #282d35;
-}
-
-#${ns}-fill {
-  fill: rgba(0, 0, 0, 0);
-  stroke: rgb(186, 223, 172);
-  stroke-dasharray: 219.99078369140625;
-  stroke-dashoffset: -219.99078369140625;
-  stroke-width: 10;
-  transform: rotate(90deg)translate(0px, -80px);
-}
-
-#${ns}-percent {
-  font-family: 'Open Sans';
-  font-size: 18px;
-  fill: #ffffff;
-}
-
-#${ns}-percent-value {
-  dominant-baseline: middle;
-  text-anchor: middle;
-}
-
-#${ns}-percent-super {
-  fill: #bdc3c7;
-  font-size: .45em;
-  baseline-shift: 10%;
-}
-
-.${ns}-noselect {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  cursor: default;
-}
-
-@keyframes ${ns}-fade {
-	0% {
-		opacity: 1;
-		transform: scale(1);
-		-webkit-transform: scale(1);
-	}
-	100% {
-		opacity: 0;
-		transform: scale(0);
-		-webkit-transform: scale(0);
-	}
-}
-
-.${ns}-disappear {
-  animation: ${ns}-fade .3s;
-  animation-fill-mode:forwards;
-  animation-delay: .5s;
-}
-
-.${ns}-hidden {
-  display: none;
-}
-
-/* Put google web font at the end, or you'll see FOUC in Firefox */
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
-`;
-
-const html = `
-<svg id="${ns}" class="${ns}-noselect ${ns}-hidden" x="0px" y="0px" viewBox="0 0 80 80">
-  <circle id="${ns}-bg" cx="50%" cy="50%" r="35"></circle>
-  <path id="${ns}-fill" d="M5,40a35,35 0 1,0 70,0a35,35 0 1,0 -70,0" />
-  <text id="${ns}-percent" x="50%" y="51%"><tspan id="${ns}-percent-value">0</tspan><tspan id="${ns}-percent-super">%</tspan></text>
-</svg>
-`;
-
-let hideOnPageVisible = false;
-
-const update = (percent) => {
-  const max = -219.99078369140625;
-  const value = document.querySelector(`#${ns}-percent-value`);
-  const track = document.querySelector(`#${ns}-fill`);
-  const offset = ((100 - percent) / 100) * max;
-
-  track.setAttribute('style', `stroke-dashoffset: ${offset}`);
-  value.innerHTML = percent.toString();
-};
-
-const reset = (svg) => {
-  svg.classList.add(`${ns}-disappear`);
-};
-
-const init = (options, socket) => {
-  if (options.firstInstance) {
-    document.addEventListener('DOMContentLoaded', () => {
-      addCss(css);
-      addHtml(html);
-
-      // Reset progress to zero after disappear animation
-      const svg = document.querySelector(`#${ns}`);
-      svg.addEventListener('animationend', () => {
-        update(0);
-        svg.classList.add(`${ns}-hidden`);
-      });
-    });
-
-    document.addEventListener('visibilitychange', () => {
-      if (!document.hidden && hideOnPageVisible) {
-        const svg = document.querySelector(`#${ns}`);
-        reset(svg);
-        hideOnPageVisible = false;
-      }
-    });
-  }
-
-  socket.addEventListener('message', (message) => {
-    const { action, data } = JSON.parse(message.data);
-
-    if (action !== 'progress') {
-      return;
-    }
-
-    const percent = Math.floor(data.percent * 100);
-    const svg = document.querySelector(`#${ns}`);
-
-    if (!svg) {
-      return;
-    }
-
-    // we can safely call this even if it doesn't have the class
-    svg.classList.remove(`${ns}-disappear`, `${ns}-hidden`);
-
-    if (data.percent === 1) {
-      if (document.hidden) {
-        hideOnPageVisible = true;
-      } else {
-        reset(svg);
-      }
-    } else {
-      hideOnPageVisible = false;
-    }
-
-    update(percent);
-  });
-};
-
-module.exports = { init };
-
+eval("/*\n  Copyright © 2018 Andrew Powell, Matheus Gonçalves da Silva\n\n  This Source Code Form is subject to the terms of the Mozilla Public\n  License, v. 2.0. If a copy of the MPL was not distributed with this\n  file, You can obtain one at http://mozilla.org/MPL/2.0/.\n\n  The above copyright notice and this permission notice shall be\n  included in all copies or substantial portions of this Source Code Form.\n*/\nconst { addCss, addHtml } = __webpack_require__(/*! ./util */ \"./node_modules/webpack-plugin-serve/lib/client/overlays/util.js\");\n\nconst ns = 'wps-progress';\nconst css = `\n#${ns}{\n  width: 200px;\n  height: 200px;\n  position: fixed;\n  right: 5%;\n  top: 5%;\n  transition: opacity .25s ease-in-out;\n  z-index: 2147483645;\n}\n\n#${ns}-bg {\n  fill: #282d35;\n}\n\n#${ns}-fill {\n  fill: rgba(0, 0, 0, 0);\n  stroke: rgb(186, 223, 172);\n  stroke-dasharray: 219.99078369140625;\n  stroke-dashoffset: -219.99078369140625;\n  stroke-width: 10;\n  transform: rotate(90deg)translate(0px, -80px);\n}\n\n#${ns}-percent {\n  font-family: 'Open Sans';\n  font-size: 18px;\n  fill: #ffffff;\n}\n\n#${ns}-percent-value {\n  dominant-baseline: middle;\n  text-anchor: middle;\n}\n\n#${ns}-percent-super {\n  fill: #bdc3c7;\n  font-size: .45em;\n  baseline-shift: 10%;\n}\n\n.${ns}-noselect {\n  -webkit-touch-callout: none;\n  -webkit-user-select: none;\n  -khtml-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  cursor: default;\n}\n\n@keyframes ${ns}-fade {\n\t0% {\n\t\topacity: 1;\n\t\ttransform: scale(1);\n\t\t-webkit-transform: scale(1);\n\t}\n\t100% {\n\t\topacity: 0;\n\t\ttransform: scale(0);\n\t\t-webkit-transform: scale(0);\n\t}\n}\n\n.${ns}-disappear {\n  animation: ${ns}-fade .3s;\n  animation-fill-mode:forwards;\n  animation-delay: .5s;\n}\n\n.${ns}-hidden {\n  display: none;\n}\n\n/* Put google web font at the end, or you'll see FOUC in Firefox */\n@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');\n`;\n\nconst html = `\n<svg id=\"${ns}\" class=\"${ns}-noselect ${ns}-hidden\" x=\"0px\" y=\"0px\" viewBox=\"0 0 80 80\">\n  <circle id=\"${ns}-bg\" cx=\"50%\" cy=\"50%\" r=\"35\"></circle>\n  <path id=\"${ns}-fill\" d=\"M5,40a35,35 0 1,0 70,0a35,35 0 1,0 -70,0\" />\n  <text id=\"${ns}-percent\" x=\"50%\" y=\"51%\"><tspan id=\"${ns}-percent-value\">0</tspan><tspan id=\"${ns}-percent-super\">%</tspan></text>\n</svg>\n`;\n\nlet hideOnPageVisible = false;\n\nconst update = (percent) => {\n  const max = -219.99078369140625;\n  const value = document.querySelector(`#${ns}-percent-value`);\n  const track = document.querySelector(`#${ns}-fill`);\n  const offset = ((100 - percent) / 100) * max;\n\n  track.setAttribute('style', `stroke-dashoffset: ${offset}`);\n  value.innerHTML = percent.toString();\n};\n\nconst reset = (svg) => {\n  svg.classList.add(`${ns}-disappear`);\n};\n\nconst init = (options, socket) => {\n  if (options.firstInstance) {\n    document.addEventListener('DOMContentLoaded', () => {\n      addCss(css);\n      addHtml(html);\n\n      // Reset progress to zero after disappear animation\n      const svg = document.querySelector(`#${ns}`);\n      svg.addEventListener('animationend', () => {\n        update(0);\n        svg.classList.add(`${ns}-hidden`);\n      });\n    });\n\n    document.addEventListener('visibilitychange', () => {\n      if (!document.hidden && hideOnPageVisible) {\n        const svg = document.querySelector(`#${ns}`);\n        reset(svg);\n        hideOnPageVisible = false;\n      }\n    });\n  }\n\n  socket.addEventListener('message', (message) => {\n    const { action, data } = JSON.parse(message.data);\n\n    if (action !== 'progress') {\n      return;\n    }\n\n    const percent = Math.floor(data.percent * 100);\n    const svg = document.querySelector(`#${ns}`);\n\n    if (!svg) {\n      return;\n    }\n\n    // we can safely call this even if it doesn't have the class\n    svg.classList.remove(`${ns}-disappear`, `${ns}-hidden`);\n\n    if (data.percent === 1) {\n      if (document.hidden) {\n        hideOnPageVisible = true;\n      } else {\n        reset(svg);\n      }\n    } else {\n      hideOnPageVisible = false;\n    }\n\n    update(percent);\n  });\n};\n\nmodule.exports = { init };\n\n\n//# sourceURL=webpack:///(webpack)-plugin-serve/lib/client/overlays/progress.js?");
 
 /***/ }),
 
@@ -1558,411 +979,7 @@ module.exports = { init };
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-/*
-  Copyright © 2018 Andrew Powell
-
-  This Source Code Form is subject to the terms of the Mozilla Public
-  License, v. 2.0. If a copy of the MPL was not distributed with this
-  file, You can obtain one at http://mozilla.org/MPL/2.0/.
-
-  The above copyright notice and this permission notice shall be
-  included in all copies or substantial portions of this Source Code Form.
-*/
-const { addCss, addHtml, socketMessage } = __webpack_require__(/*! ./util */ "./node_modules/webpack-plugin-serve/lib/client/overlays/util.js");
-
-const ns = 'wps-status';
-const css = `
-#${ns} {
-  background: #282d35;
-  border-radius: 0.6em;
-  display: flex;
-  flex-direction: column;
-	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-	font-size: 10px;
-  height: 90%;
-  min-height: 20em;
-  left: 50%;
-  opacity: 1;
-  overflow: hidden;
-  padding-bottom: 3em;
-  position: absolute;
-  top: 2rem;
-  transform: translateX(-50%);
-  transition: opacity .25s ease-in-out;
-  width: 95%;
-  z-index: 2147483645;
-}
-
-@keyframes ${ns}-hidden-display {
-	0% {
-		opacity: 1;
-	}
-	99% {
-		display: inline-flex;
-		opacity: 0;
-	}
-	100% {
-		display: none;
-		opacity: 0;
-	}
-}
-
-#${ns}.${ns}-hidden {
-  animation: ${ns}-hidden-display .3s;
-  animation-fill-mode:forwards;
-  display: none;
-}
-
-#${ns}.${ns}-min {
-  animation: minimize 10s;
-  bottom: 2em;
-  cursor: pointer;
-  height: 6em;
-  left: auto;
-  min-height: 6em;
-  padding-bottom: 0;
-  position: absolute;
-  right: 2em;
-  top: auto;
-  transform: none;
-  width: 6em;
-}
-
-#${ns}.${ns}-min #${ns}-beacon {
-  display: block;
-}
-
-#${ns}-title {
-  color: #fff;
-  font-size: 1.2em;
-  font-weight: normal;
-  margin: 0;
-  padding: 0.6em 0;
-  text-align: center;
-  width: 100%;
-}
-
-#${ns}.${ns}-min #${ns}-title {
-  display: none;
-}
-
-#${ns}-title-errors {
-  color: #ff5f58;
-  font-style: normal;
-  padding-left: 1em;
-}
-
-#${ns}-title-warnings {
-  color: #ffbd2e;
-  font-style: normal;
-  padding-left: 1em;
-}
-
-#${ns}-problems {
-  overflow-y: auto;
-  padding: 1em 2em;
-}
-
-#${ns}-problems pre {
-  color: #ddd;
-  background: #282d35;
-  display: block;
-  font-size: 1.3em;
-	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-  white-space: pre-wrap;
-}
-
-#${ns}-problems pre em {
-  background: #ff5f58;
-  border-radius: 0.3em;
-  color: #641e16;
-  font-style: normal;
-  line-height: 3em;
-  margin-right: 0.4em;
-  padding: 0.1em 0.4em;
-  text-transform: uppercase;
-}
-
-pre#${ns}-warnings em {
-  background: #ffbd2e;
-  color: #3e2723;
-}
-
-pre#${ns}-success {
-  display: none;
-  text-align: center;
-}
-
-pre#${ns}-success em {
-  background: #7fb900;
-  color: #004d40;
-}
-
-#${ns}-problems.${ns}-success #${ns}-success {
-  display: block;
-}
-
-#${ns}.${ns}-min #${ns}-problems {
-  display: none;
-}
-
-#${ns}-nav {
-  opacity: 0.5;
-  padding: 1.2em;
-  position: absolute;
-}
-
-#${ns}.${ns}-min #${ns}-nav {
-  display: none;
-}
-
-#${ns}-nav:hover {
-  opacity: 1;
-}
-
-#${ns}-nav div {
-  background: #ff5f58;
-  border-radius: 1.2em;
-  cursor: pointer;
-  display: inline-block;
-  height: 1.2em;
-  position: relative;
-  width: 1.2em;
-}
-
-div#${ns}-min {
-  background: #ffbd2e;
-  margin-left: 0.8em;
-}
-
-#${ns}-beacon {
-  border-radius: 3em;
-  display: none;
-  font-size: 10px;
-  height: 3em;
-  margin: 1.6em auto;
-  position: relative;
-  width: 3em;
-}
-
-#${ns}-beacon:before, #${ns}-beacon:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(127,185,0, 0.2);
-  border-radius: 3em;
-  opacity: 0;
-}
-
-#${ns}-beacon:before {
-  animation: ${ns}-pulse 3s infinite linear;
-  transform: scale(1);
-}
-
-#${ns}-beacon:after {
-  animation: ${ns}-pulse 3s 2s infinite linear;
-}
-
-
-@keyframes ${ns}-pulse {
-  0% {
-    opacity: 0;
-    transform: scale(0.6);
-  }
-  33% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  100% {
-    opacity: 0;
-    transform: scale(1.4);
-  }
-}
-
-#${ns}-beacon mark {
-  background: rgba(127, 185, 0, 1);
-  border-radius: 100% 100%;
-  height: 1em;
-  left: 1em;
-  position: absolute;
-  top: 1em;
-  width: 1em;
-}
-
-#${ns}-beacon.${ns}-error mark {
-  background: #ff5f58;
-}
-
-#${ns}-beacon.${ns}-error:before, #${ns}-beacon.error:after {
-  background: rgba(255, 95, 88, 0.2);
-}
-
-#${ns}-beacon.${ns}-warning mark {
-  background: #ffbd2e;
-}
-
-#${ns}-beacon.${ns}-warning:before, #${ns}-beacon.warning:after {
-  background: rgba(255, 189, 46, 0.2);
-}
-
-/* Put google web font at the end, or you'll see FOUC in Firefox */
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
-`;
-
-const html = `
-<aside id="${ns}" class="${ns}-hidden" title="build status">
-  <figure id="${ns}-beacon">
-    <mark/>
-  </figure>
-  <nav id="${ns}-nav">
-    <div id="${ns}-close" title="close"></div>
-    <div id="${ns}-min" title="minmize"></div>
-  </nav>
-  <h1 id="${ns}-title">
-    build status
-    <em id="${ns}-title-errors"></em>
-    <em id="${ns}-title-warnings"></em>
-  </h1>
-  <article id="${ns}-problems">
-    <pre id="${ns}-success"><em>Build Successful</em></pre>
-    <pre id="${ns}-errors"></pre>
-    <pre id="${ns}-warnings"></pre>
-  </article>
-</aside>
-`;
-
-const init = (options, socket) => {
-  const hidden = `${ns}-hidden`;
-  let hasProblems = false;
-  let aside;
-  let beacon;
-  let problems;
-  let preErrors;
-  let preWarnings;
-  let titleErrors;
-  let titleWarnings;
-
-  const reset = () => {
-    preErrors.innerHTML = '';
-    preWarnings.innerHTML = '';
-    problems.classList.remove(`${ns}-success`);
-    beacon.className = '';
-    titleErrors.innerText = '';
-    titleWarnings.innerText = '';
-  };
-
-  const addErrors = (errors) => {
-    if (errors.length) {
-      problems.classList.remove(`${ns}-success`);
-      beacon.classList.add(`${ns}-error`);
-
-      for (const error of errors) {
-        const markup = `<div><em>Error</em> in ${error}</div>`;
-        addHtml(markup, preErrors);
-      }
-
-      titleErrors.innerText = `${errors.length} Error(s)`;
-    } else {
-      titleErrors.innerText = '';
-    }
-    aside.classList.remove(hidden);
-  };
-
-  const addWarnings = (warnings) => {
-    if (warnings.length) {
-      problems.classList.remove(`${ns}-success`);
-
-      if (!beacon.classList.contains(`${ns}-error`)) {
-        beacon.classList.add(`${ns}-warning`);
-      }
-
-      for (const warning of warnings) {
-        const markup = `<div><em>Warning</em> in ${warning}</div>`;
-        addHtml(markup, preWarnings);
-      }
-
-      titleWarnings.innerText = `${warnings.length} Warning(s)`;
-    } else {
-      titleWarnings.innerText = '';
-    }
-
-    aside.classList.remove(hidden);
-  };
-
-  if (options.firstInstance) {
-    document.addEventListener('DOMContentLoaded', () => {
-      addCss(css);
-      [aside] = addHtml(html);
-      beacon = document.querySelector(`#${ns}-beacon`);
-      problems = document.querySelector(`#${ns}-problems`);
-      preErrors = document.querySelector(`#${ns}-errors`);
-      preWarnings = document.querySelector(`#${ns}-warnings`);
-      titleErrors = document.querySelector(`#${ns}-title-errors`);
-      titleWarnings = document.querySelector(`#${ns}-title-warnings`);
-
-      const close = document.querySelector(`#${ns}-close`);
-      const min = document.querySelector(`#${ns}-min`);
-
-      aside.addEventListener('click', () => {
-        aside.classList.remove(`${ns}-min`);
-      });
-
-      close.addEventListener('click', () => {
-        aside.classList.add(`${ns}-hidden`);
-      });
-
-      min.addEventListener('click', (e) => {
-        aside.classList.add(`${ns}-min`);
-        e.stopImmediatePropagation();
-      });
-    });
-  }
-
-  socketMessage(socket, (action, data) => {
-    if (!aside) {
-      return;
-    }
-
-    const { compilers } = window.webpackPluginServe;
-
-    switch (action) {
-      case 'build':
-        // clear errors and warnings when a new build begins
-        reset();
-        break;
-      case 'problems':
-        addErrors(data.errors);
-        addWarnings(data.warnings);
-        aside.classList.remove(hidden);
-        hasProblems = data.errors.length || data.warnings.length;
-        break;
-      case 'replace':
-        // if there's a compiler that isn't done yet, hold off and let it run the show
-        for (const compilerName of Object.keys(compilers)) {
-          if (!compilers[compilerName]) {
-            return;
-          }
-        }
-
-        if (hasProblems && !preErrors.children.length && !preWarnings.children.length) {
-          reset();
-          hasProblems = false;
-          problems.classList.add(`${ns}-success`);
-          aside.classList.remove(hidden);
-
-          setTimeout(() => aside.classList.add(hidden), 3e3);
-        }
-        break;
-      default:
-    }
-  });
-};
-
-module.exports = { init };
-
+eval("/*\n  Copyright © 2018 Andrew Powell\n\n  This Source Code Form is subject to the terms of the Mozilla Public\n  License, v. 2.0. If a copy of the MPL was not distributed with this\n  file, You can obtain one at http://mozilla.org/MPL/2.0/.\n\n  The above copyright notice and this permission notice shall be\n  included in all copies or substantial portions of this Source Code Form.\n*/\nconst { addCss, addHtml, socketMessage } = __webpack_require__(/*! ./util */ \"./node_modules/webpack-plugin-serve/lib/client/overlays/util.js\");\n\nconst ns = 'wps-status';\nconst css = `\n#${ns} {\n  background: #282d35;\n  border-radius: 0.6em;\n  display: flex;\n  flex-direction: column;\n\tfont-family: 'Open Sans', Helvetica, Arial, sans-serif;\n\tfont-size: 10px;\n  height: 90%;\n  min-height: 20em;\n  left: 50%;\n  opacity: 1;\n  overflow: hidden;\n  padding-bottom: 3em;\n  position: absolute;\n  top: 2rem;\n  transform: translateX(-50%);\n  transition: opacity .25s ease-in-out;\n  width: 95%;\n  z-index: 2147483645;\n}\n\n@keyframes ${ns}-hidden-display {\n\t0% {\n\t\topacity: 1;\n\t}\n\t99% {\n\t\tdisplay: inline-flex;\n\t\topacity: 0;\n\t}\n\t100% {\n\t\tdisplay: none;\n\t\topacity: 0;\n\t}\n}\n\n#${ns}.${ns}-hidden {\n  animation: ${ns}-hidden-display .3s;\n  animation-fill-mode:forwards;\n  display: none;\n}\n\n#${ns}.${ns}-min {\n  animation: minimize 10s;\n  bottom: 2em;\n  cursor: pointer;\n  height: 6em;\n  left: auto;\n  min-height: 6em;\n  padding-bottom: 0;\n  position: absolute;\n  right: 2em;\n  top: auto;\n  transform: none;\n  width: 6em;\n}\n\n#${ns}.${ns}-min #${ns}-beacon {\n  display: block;\n}\n\n#${ns}-title {\n  color: #fff;\n  font-size: 1.2em;\n  font-weight: normal;\n  margin: 0;\n  padding: 0.6em 0;\n  text-align: center;\n  width: 100%;\n}\n\n#${ns}.${ns}-min #${ns}-title {\n  display: none;\n}\n\n#${ns}-title-errors {\n  color: #ff5f58;\n  font-style: normal;\n  padding-left: 1em;\n}\n\n#${ns}-title-warnings {\n  color: #ffbd2e;\n  font-style: normal;\n  padding-left: 1em;\n}\n\n#${ns}-problems {\n  overflow-y: auto;\n  padding: 1em 2em;\n}\n\n#${ns}-problems pre {\n  color: #ddd;\n  background: #282d35;\n  display: block;\n  font-size: 1.3em;\n\tfont-family: 'Open Sans', Helvetica, Arial, sans-serif;\n  white-space: pre-wrap;\n}\n\n#${ns}-problems pre em {\n  background: #ff5f58;\n  border-radius: 0.3em;\n  color: #641e16;\n  font-style: normal;\n  line-height: 3em;\n  margin-right: 0.4em;\n  padding: 0.1em 0.4em;\n  text-transform: uppercase;\n}\n\npre#${ns}-warnings em {\n  background: #ffbd2e;\n  color: #3e2723;\n}\n\npre#${ns}-success {\n  display: none;\n  text-align: center;\n}\n\npre#${ns}-success em {\n  background: #7fb900;\n  color: #004d40;\n}\n\n#${ns}-problems.${ns}-success #${ns}-success {\n  display: block;\n}\n\n#${ns}.${ns}-min #${ns}-problems {\n  display: none;\n}\n\n#${ns}-nav {\n  opacity: 0.5;\n  padding: 1.2em;\n  position: absolute;\n}\n\n#${ns}.${ns}-min #${ns}-nav {\n  display: none;\n}\n\n#${ns}-nav:hover {\n  opacity: 1;\n}\n\n#${ns}-nav div {\n  background: #ff5f58;\n  border-radius: 1.2em;\n  cursor: pointer;\n  display: inline-block;\n  height: 1.2em;\n  position: relative;\n  width: 1.2em;\n}\n\ndiv#${ns}-min {\n  background: #ffbd2e;\n  margin-left: 0.8em;\n}\n\n#${ns}-beacon {\n  border-radius: 3em;\n  display: none;\n  font-size: 10px;\n  height: 3em;\n  margin: 1.6em auto;\n  position: relative;\n  width: 3em;\n}\n\n#${ns}-beacon:before, #${ns}-beacon:after {\n  content: '';\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  background: rgba(127,185,0, 0.2);\n  border-radius: 3em;\n  opacity: 0;\n}\n\n#${ns}-beacon:before {\n  animation: ${ns}-pulse 3s infinite linear;\n  transform: scale(1);\n}\n\n#${ns}-beacon:after {\n  animation: ${ns}-pulse 3s 2s infinite linear;\n}\n\n\n@keyframes ${ns}-pulse {\n  0% {\n    opacity: 0;\n    transform: scale(0.6);\n  }\n  33% {\n    opacity: 1;\n    transform: scale(1);\n  }\n  100% {\n    opacity: 0;\n    transform: scale(1.4);\n  }\n}\n\n#${ns}-beacon mark {\n  background: rgba(127, 185, 0, 1);\n  border-radius: 100% 100%;\n  height: 1em;\n  left: 1em;\n  position: absolute;\n  top: 1em;\n  width: 1em;\n}\n\n#${ns}-beacon.${ns}-error mark {\n  background: #ff5f58;\n}\n\n#${ns}-beacon.${ns}-error:before, #${ns}-beacon.error:after {\n  background: rgba(255, 95, 88, 0.2);\n}\n\n#${ns}-beacon.${ns}-warning mark {\n  background: #ffbd2e;\n}\n\n#${ns}-beacon.${ns}-warning:before, #${ns}-beacon.warning:after {\n  background: rgba(255, 189, 46, 0.2);\n}\n\n/* Put google web font at the end, or you'll see FOUC in Firefox */\n@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');\n`;\n\nconst html = `\n<aside id=\"${ns}\" class=\"${ns}-hidden\" title=\"build status\">\n  <figure id=\"${ns}-beacon\">\n    <mark/>\n  </figure>\n  <nav id=\"${ns}-nav\">\n    <div id=\"${ns}-close\" title=\"close\"></div>\n    <div id=\"${ns}-min\" title=\"minmize\"></div>\n  </nav>\n  <h1 id=\"${ns}-title\">\n    build status\n    <em id=\"${ns}-title-errors\"></em>\n    <em id=\"${ns}-title-warnings\"></em>\n  </h1>\n  <article id=\"${ns}-problems\">\n    <pre id=\"${ns}-success\"><em>Build Successful</em></pre>\n    <pre id=\"${ns}-errors\"></pre>\n    <pre id=\"${ns}-warnings\"></pre>\n  </article>\n</aside>\n`;\n\nconst init = (options, socket) => {\n  const hidden = `${ns}-hidden`;\n  let hasProblems = false;\n  let aside;\n  let beacon;\n  let problems;\n  let preErrors;\n  let preWarnings;\n  let titleErrors;\n  let titleWarnings;\n\n  const reset = () => {\n    preErrors.innerHTML = '';\n    preWarnings.innerHTML = '';\n    problems.classList.remove(`${ns}-success`);\n    beacon.className = '';\n    titleErrors.innerText = '';\n    titleWarnings.innerText = '';\n  };\n\n  const addErrors = (errors) => {\n    if (errors.length) {\n      problems.classList.remove(`${ns}-success`);\n      beacon.classList.add(`${ns}-error`);\n\n      for (const error of errors) {\n        const markup = `<div><em>Error</em> in ${error}</div>`;\n        addHtml(markup, preErrors);\n      }\n\n      titleErrors.innerText = `${errors.length} Error(s)`;\n    } else {\n      titleErrors.innerText = '';\n    }\n    aside.classList.remove(hidden);\n  };\n\n  const addWarnings = (warnings) => {\n    if (warnings.length) {\n      problems.classList.remove(`${ns}-success`);\n\n      if (!beacon.classList.contains(`${ns}-error`)) {\n        beacon.classList.add(`${ns}-warning`);\n      }\n\n      for (const warning of warnings) {\n        const markup = `<div><em>Warning</em> in ${warning}</div>`;\n        addHtml(markup, preWarnings);\n      }\n\n      titleWarnings.innerText = `${warnings.length} Warning(s)`;\n    } else {\n      titleWarnings.innerText = '';\n    }\n\n    aside.classList.remove(hidden);\n  };\n\n  if (options.firstInstance) {\n    document.addEventListener('DOMContentLoaded', () => {\n      addCss(css);\n      [aside] = addHtml(html);\n      beacon = document.querySelector(`#${ns}-beacon`);\n      problems = document.querySelector(`#${ns}-problems`);\n      preErrors = document.querySelector(`#${ns}-errors`);\n      preWarnings = document.querySelector(`#${ns}-warnings`);\n      titleErrors = document.querySelector(`#${ns}-title-errors`);\n      titleWarnings = document.querySelector(`#${ns}-title-warnings`);\n\n      const close = document.querySelector(`#${ns}-close`);\n      const min = document.querySelector(`#${ns}-min`);\n\n      aside.addEventListener('click', () => {\n        aside.classList.remove(`${ns}-min`);\n      });\n\n      close.addEventListener('click', () => {\n        aside.classList.add(`${ns}-hidden`);\n      });\n\n      min.addEventListener('click', (e) => {\n        aside.classList.add(`${ns}-min`);\n        e.stopImmediatePropagation();\n      });\n    });\n  }\n\n  socketMessage(socket, (action, data) => {\n    if (!aside) {\n      return;\n    }\n\n    const { compilers } = window.webpackPluginServe;\n\n    switch (action) {\n      case 'build':\n        // clear errors and warnings when a new build begins\n        reset();\n        break;\n      case 'problems':\n        addErrors(data.errors);\n        addWarnings(data.warnings);\n        aside.classList.remove(hidden);\n        hasProblems = data.errors.length || data.warnings.length;\n        break;\n      case 'replace':\n        // if there's a compiler that isn't done yet, hold off and let it run the show\n        for (const compilerName of Object.keys(compilers)) {\n          if (!compilers[compilerName]) {\n            return;\n          }\n        }\n\n        if (hasProblems && !preErrors.children.length && !preWarnings.children.length) {\n          reset();\n          hasProblems = false;\n          problems.classList.add(`${ns}-success`);\n          aside.classList.remove(hidden);\n\n          setTimeout(() => aside.classList.add(hidden), 3e3);\n        }\n        break;\n      default:\n    }\n  });\n};\n\nmodule.exports = { init };\n\n\n//# sourceURL=webpack:///(webpack)-plugin-serve/lib/client/overlays/status.js?");
 
 /***/ }),
 
@@ -1973,53 +990,7 @@ module.exports = { init };
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-/*
-  Copyright © 2018 Andrew Powell
-
-  This Source Code Form is subject to the terms of the Mozilla Public
-  License, v. 2.0. If a copy of the MPL was not distributed with this
-  file, You can obtain one at http://mozilla.org/MPL/2.0/.
-
-  The above copyright notice and this permission notice shall be
-  included in all copies or substantial portions of this Source Code Form.
-*/
-const addHtml = (html, parent) => {
-  const div = document.createElement('div');
-  const nodes = [];
-
-  div.innerHTML = html.trim();
-
-  while (div.firstChild) {
-    nodes.push((parent || document.body).appendChild(div.firstChild));
-  }
-
-  return nodes;
-};
-
-const addCss = (css) => {
-  const style = document.createElement('style');
-
-  style.type = 'text/css';
-
-  if (css.styleSheet) {
-    style.styleSheet.cssText = css;
-  } else {
-    style.appendChild(document.createTextNode(css));
-  }
-
-  // append the stylesheet for the svg
-  document.head.appendChild(style);
-};
-
-const socketMessage = (socket, handler) => {
-  socket.addEventListener('message', (message) => {
-    const { action, data = {} } = JSON.parse(message.data);
-    handler(action, data);
-  });
-};
-
-module.exports = { addCss, addHtml, socketMessage };
-
+eval("/*\n  Copyright © 2018 Andrew Powell\n\n  This Source Code Form is subject to the terms of the Mozilla Public\n  License, v. 2.0. If a copy of the MPL was not distributed with this\n  file, You can obtain one at http://mozilla.org/MPL/2.0/.\n\n  The above copyright notice and this permission notice shall be\n  included in all copies or substantial portions of this Source Code Form.\n*/\nconst addHtml = (html, parent) => {\n  const div = document.createElement('div');\n  const nodes = [];\n\n  div.innerHTML = html.trim();\n\n  while (div.firstChild) {\n    nodes.push((parent || document.body).appendChild(div.firstChild));\n  }\n\n  return nodes;\n};\n\nconst addCss = (css) => {\n  const style = document.createElement('style');\n\n  style.type = 'text/css';\n\n  if (css.styleSheet) {\n    style.styleSheet.cssText = css;\n  } else {\n    style.appendChild(document.createTextNode(css));\n  }\n\n  // append the stylesheet for the svg\n  document.head.appendChild(style);\n};\n\nconst socketMessage = (socket, handler) => {\n  socket.addEventListener('message', (message) => {\n    const { action, data = {} } = JSON.parse(message.data);\n    handler(action, data);\n  });\n};\n\nmodule.exports = { addCss, addHtml, socketMessage };\n\n\n//# sourceURL=webpack:///(webpack)-plugin-serve/lib/client/overlays/util.js?");
 
 /***/ }),
 
@@ -2031,13 +1002,7 @@ module.exports = { addCss, addHtml, socketMessage };
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-
-/* harmony default export */ __webpack_exports__["default"] = ((text = 'Hello World') => {
-    const element = document.createElement('div');
-    element.innerHTML = text;
-    return element;
-});
+eval("__webpack_require__.r(__webpack_exports__);\n\r\n/* harmony default export */ __webpack_exports__[\"default\"] = ((text = 'Hello World') => {\r\n    const element = document.createElement('div');\r\n    element.innerHTML = text;\r\n    return element;\r\n});\n\n//# sourceURL=webpack:///./src/component.js?");
 
 /***/ }),
 
@@ -2049,11 +1014,18 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./component */ "./src/component.js");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./component */ \"./src/component.js\");\n/* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./main.css */ \"./src/main.css\");\n/* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_main_css__WEBPACK_IMPORTED_MODULE_1__);\n\r\n\r\n\r\ndocument.body.appendChild(Object(_component__WEBPACK_IMPORTED_MODULE_0__[\"default\"])('Walenie'));\n\n//# sourceURL=webpack:///./src/index.js?");
 
+/***/ }),
 
-document.body.appendChild(Object(_component__WEBPACK_IMPORTED_MODULE_0__["default"])());
+/***/ "./src/main.css":
+/*!**********************!*\
+  !*** ./src/main.css ***!
+  \**********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("var api = __webpack_require__(/*! ../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ \"./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js\");\n            var content = __webpack_require__(/*! !../node_modules/css-loader/dist/cjs.js!./main.css */ \"./node_modules/css-loader/dist/cjs.js!./src/main.css\");\n\n            content = content.__esModule ? content.default : content;\n\n            if (typeof content === 'string') {\n              content = [[module.i, content, '']];\n            }\n\nvar options = {};\n\noptions.insert = \"head\";\noptions.singleton = false;\n\nvar update = api(content, options);\n\n\nif (true) {\n  if (!content.locals || module.hot.invalidate) {\n    var isEqualLocals = function isEqualLocals(a, b) {\n  if (!a && b || a && !b) {\n    return false;\n  }\n\n  var p;\n\n  for (p in a) {\n    if (a[p] !== b[p]) {\n      return false;\n    }\n  }\n\n  for (p in b) {\n    if (!a[p]) {\n      return false;\n    }\n  }\n\n  return true;\n};\n    var oldLocals = content.locals;\n\n    module.hot.accept(\n      /*! !../node_modules/css-loader/dist/cjs.js!./main.css */ \"./node_modules/css-loader/dist/cjs.js!./src/main.css\",\n      function () {\n        content = __webpack_require__(/*! !../node_modules/css-loader/dist/cjs.js!./main.css */ \"./node_modules/css-loader/dist/cjs.js!./src/main.css\");\n\n              content = content.__esModule ? content.default : content;\n\n              if (typeof content === 'string') {\n                content = [[module.i, content, '']];\n              }\n\n              if (!isEqualLocals(oldLocals, content.locals)) {\n                module.hot.invalidate();\n\n                return;\n              }\n\n              oldLocals = content.locals;\n\n              update(content);\n      }\n    )\n  }\n\n  module.hot.dispose(function() {\n    update();\n  });\n}\n\nmodule.exports = content.locals || {};\n\n//# sourceURL=webpack:///./src/main.css?");
 
 /***/ }),
 
@@ -2064,11 +1036,8 @@ document.body.appendChild(Object(_component__WEBPACK_IMPORTED_MODULE_0__["defaul
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! ./src */"./src/index.js");
-module.exports = __webpack_require__(/*! webpack-plugin-serve/client */"./node_modules/webpack-plugin-serve/client.js");
-
+eval("__webpack_require__(/*! ./src */\"./src/index.js\");\nmodule.exports = __webpack_require__(/*! webpack-plugin-serve/client */\"./node_modules/webpack-plugin-serve/client.js\");\n\n\n//# sourceURL=webpack:///multi_./src_webpack-plugin-serve/client?");
 
 /***/ })
 
 /******/ });
-//# sourceMappingURL=main.js.map

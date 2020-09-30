@@ -5,15 +5,16 @@ const { merge } = require('webpack-merge');
 
 const commonConfig = merge([
     {
-        context: path.resolve(__dirname),
-        devtool: 'source-map',
-        watch: mode === 'development',
+        //context: path.resolve(__dirname),
+        //devtool: 'source-map',
         entry: ['./src'],
         output: {
             filename: './dist/main.js',
             path: path.resolve(__dirname)
-          },
+        },
     },
+    parts.page({ title: "Webpack-kit" }),
+    parts.loadCSS(),
 ])
 
 const productionConfig = merge([]);
