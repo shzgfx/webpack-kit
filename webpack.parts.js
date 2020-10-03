@@ -1,7 +1,7 @@
 const { WebpackPluginServe } = require("webpack-plugin-serve");
 
 const { MiniHtmlWebpackPlugin } = require("mini-html-webpack-plugin");
-//const WebpackBar = require('webpackbar');
+const WebpackBar = require('webpackbar');
 
 exports.devServer = () => ({
     watch: true,   
@@ -11,8 +11,9 @@ exports.devServer = () => ({
             static: './dist',
             liveReload: true,
             waitForBuild: true,
+            host: 'localhost'
         }),
-        //new WebpackBar(),
+        new WebpackBar(),
     ],
 
 });

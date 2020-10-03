@@ -1,4 +1,4 @@
 import component from './component';
 import './main.css';
 
-document.body.appendChild(component('Walenie'));
+document.body.appendChild(component('kurwa'));
