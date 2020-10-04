@@ -3,6 +3,8 @@ const { mode } = require("webpack-nano/argv");
 const parts = require('./webpack.parts');
 const { merge } = require('webpack-merge');
 
+
+
 const commonConfig = merge([
     {
         //context: path.resolve(__dirname),
@@ -14,16 +16,19 @@ const commonConfig = merge([
         },
     },
     parts.page({ title: "Webpack-kit" }),
-    parts.loadCSS(),
+    
 ])
 
-const productionConfig = merge([]);
+const productionConfig = merge([
+    parts.extractCSS(),
+]);
 
 const developmentConfig = merge([
     {
         entry: ['webpack-plugin-serve/client'],
     },
     parts.devServer(),
+    parts.extractCSS({ options: {hmr: true} }),
 ])
 
 const getConfig = (mode) => {
