@@ -20,7 +20,7 @@ const commonConfig = merge([
     
 ])
 
-const cssLoaders = [parts.tailwind()];
+const cssLoaders = [parts.autoprefix(), parts.tailwind()];
 
 const productionConfig = merge([
     parts.extractCSS( { loaders: cssLoaders }),
