@@ -11,16 +11,20 @@ const commonConfig = merge([
         //devtool: 'source-map',
         entry: ['./src'],
         output: {
-            filename: './dist/main.js',
-            path: path.resolve(__dirname)
-        },
+            path: path.resolve(__dirname, 'dist'),
+            filename: '[name].js'
+        }
     },
+
     parts.page({ title: "Webpack-kit" }),
     
 ])
 
+const cssLoaders = [parts.tailwind()];
+
 const productionConfig = merge([
-    parts.extractCSS(),
+    parts.extractCSS( { loaders: cssLoaders }),
+    parts.eliminateUnusedCSS(),
 ]);
 
 const developmentConfig = merge([
@@ -28,7 +32,7 @@ const developmentConfig = merge([
         entry: ['webpack-plugin-serve/client'],
     },
     parts.devServer(),
-    parts.extractCSS({ options: {hmr: true} }),
+    parts.extractCSS({ options: {hmr: true}, loaders: cssLoaders  }),
 ])
 
 const getConfig = (mode) => {
