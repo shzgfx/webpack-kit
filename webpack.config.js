@@ -17,8 +17,15 @@ const commonConfig = merge([
     },
 
     parts.page({ title: "Webpack-kit" }),
+
+    parts.loadImages({
+        options: {
+          limit: 15000,
+          name: "[name].[ext]",
+        },
+      }),
     
-])
+]);
 
 const cssLoaders = [parts.autoprefix(), parts.tailwind()];
 

@@ -3,6 +3,10 @@
 
 @tailwind utilities;
 
-body {
-    background-color: greenyellow;
-}
+body {  
+    background-color: teal;
+    background-image: url("./hehe.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+  }
