@@ -39,7 +39,7 @@ exports.extractCSS = ({ options = {}, loaders = []} = {}) => {
         module: {
             rules: [
                 {
-                    test: /\.css$/,
+                    test: /\.scss$/,
                     use: [
                         { loader: MiniCssExtractPlugin.loader, options},
                         "css-loader",
@@ -84,10 +84,14 @@ exports.autoprefix = () => ({
     loader: "postcss-loader",
     options: {
         postcssOptions: {
-            plugins: [require("autoprefixer")()],
+            plugins: [require("autoprefixer")(), require("precss")()],
         },
     },
 });
+
+exports.sassCSS = () => ({
+    loader: "sass-loader"
+})
 
 exports.loadImages = ({ include, exclude, options } = {}) => ({
     module: {

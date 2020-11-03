@@ -27,7 +27,7 @@ const commonConfig = merge([
     
 ]);
 
-const cssLoaders = [parts.autoprefix(), parts.tailwind()];
+const cssLoaders = [parts.autoprefix(), parts.tailwind(), parts.sassCSS()];
 
 const productionConfig = merge([
     parts.extractCSS( { loaders: cssLoaders }),
