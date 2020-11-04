@@ -42,7 +42,12 @@ exports.extractCSS = ({ options = {}, loaders = []} = {}) => {
                     test: /\.scss$/,
                     use: [
                         { loader: MiniCssExtractPlugin.loader, options},
-                        "css-loader",
+                        { 
+                            loader: "css-loader",
+                            options: {
+                                sourceMap: true
+                            }
+                        },
                     ].concat(loaders),
                     sideEffects: true,
                 },
@@ -86,11 +91,15 @@ exports.autoprefix = () => ({
         postcssOptions: {
             plugins: [require("autoprefixer")(), require("precss")()],
         },
+        sourceMap: true,
     },
 });
 
 exports.sassCSS = () => ({
-    loader: "sass-loader"
+    loader: "sass-loader",
+    options: {
+        sourceMap: true
+    }
 })
 
 exports.loadImages = ({ include, exclude, options } = {}) => ({

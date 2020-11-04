@@ -346,14 +346,6 @@ main {
 }
 
 body{
-  height:100%;
-  margin:0;
-  height:0;
-  display:flex;
-  background:linear-gradient(#e98a00, #f5aa2f)
-}
-
-body{
   background-color:blue;
   background-image:url(hehe.jpg);
   background-repeat:no-repeat;
