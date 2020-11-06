@@ -9,10 +9,12 @@ const commonConfig = merge([
     {
         //context: path.resolve(__dirname),
         //devtool: 'source-map',
+        mode: "none",
         entry: ['./src'],
         output: {
             path: path.resolve(__dirname, 'dist'),
-            filename: '[name].js'
+            filename: '[name].js',
+            publicPath: 'http://localhost:3000'
         }
     },
 
@@ -24,6 +26,8 @@ const commonConfig = merge([
           name: "[name].[ext]",
         },
       }),
+    
+    parts.loadJavasScript(),
     
 ]);
 
