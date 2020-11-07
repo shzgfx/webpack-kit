@@ -9,7 +9,6 @@ const commonConfig = merge([
     {
         //context: path.resolve(__dirname),
         //devtool: 'source-map',
-        mode: "none",
         entry: ['./src'],
         output: {
             path: path.resolve(__dirname, 'dist'),
@@ -36,6 +35,7 @@ const cssLoaders = [parts.autoprefix(), parts.tailwind(), parts.sassCSS()];
 const productionConfig = merge([
     parts.extractCSS( { loaders: cssLoaders }),
     parts.eliminateUnusedCSS(),
+    parts.generateSourceMaps({type: 'eval'})
 ]);
 
 const developmentConfig = merge([
