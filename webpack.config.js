@@ -13,7 +13,7 @@ const commonConfig = merge([
         output: {
             path: path.resolve(__dirname, 'dist'),
             filename: '[name].js',
-            publicPath: 'http://localhost:3000'
+            //publicPath: 'http://localhost:3000'
         }
     },
 
@@ -35,7 +35,15 @@ const cssLoaders = [parts.autoprefix(), parts.tailwind(), parts.sassCSS()];
 const productionConfig = merge([
     parts.extractCSS( { loaders: cssLoaders }),
     parts.eliminateUnusedCSS(),
-    parts.generateSourceMaps({type: 'eval'})
+    parts.generateSourceMaps({type: 'eval'}),
+
+    {
+        optimization: {
+            splitChunks: {
+                chunks: "all",
+            }
+        },
+    }
 ]);
 
 const developmentConfig = merge([
