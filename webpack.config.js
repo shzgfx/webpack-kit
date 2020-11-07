@@ -27,7 +27,7 @@ const commonConfig = merge([
       }),
     
     parts.loadJavasScript(),
-    
+    parts.clean(),
 ]);
 
 const cssLoaders = [parts.autoprefix(), parts.tailwind(), parts.sassCSS()];
@@ -40,10 +40,17 @@ const productionConfig = merge([
     {
         optimization: {
             splitChunks: {
-                chunks: "all",
+                cacheGroups: {
+                    commons: {
+                        test: /[\\/]node_modules[\\/]/,
+                        name: 'vendor',
+                        chunks: 'initial',
+                    }
+                }
             }
         },
-    }
+    },
+    parts.attachRevision(),
 ]);
 
 const developmentConfig = merge([
