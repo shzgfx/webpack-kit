@@ -51,6 +51,12 @@ const productionConfig = merge([
         },
     },
     parts.attachRevision(),
+    parts.minifyJavaScript(),
+    parts.minifyCSS( {
+        options: {
+            preset: ["default"],
+        },
+    }),
 ]);
 
 const developmentConfig = merge([

@@ -8,6 +8,8 @@ const glob = require('glob');
 const PurgeCSSPlugin = require("purgecss-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const GitRevisionPlugin = require("git-revision-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
+const CssMimimizerPlugin = require("css-minimizer-webpack-plugin");
 
 
 const ALL_FILES = glob.sync(path.join(__dirname, "src/*.js"));
@@ -149,3 +151,18 @@ exports.loadImages = ({ include, exclude, options } = {}) => ({
           }),
       ],
   })
+
+  exports.minifyJavaScript = () => ({
+      optimization: {
+          minimizer: [new TerserPlugin()],
+      },
+  });
+
+  exports.minifyCSS = ({ options }) => ({
+      optimization: {
+          minimizer: [
+              new CssMimimizerPlugin( {minimizerOptions: options }),
+          ],
+      },
+
+  });
