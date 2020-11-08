@@ -5,6 +5,6 @@ import 'react';
 import 'react-dom';
 import { bake } from "./shake";
 
-document.body.appendChild(component('Hej co tam'));
+document.body.appendChild(component());
 document.body.appendChild(component2('hejahej'));
 bake();

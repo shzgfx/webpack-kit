@@ -4,7 +4,6 @@ const parts = require('./webpack.parts');
 const { merge } = require('webpack-merge');
 
 
-
 const commonConfig = merge([
     {
         //context: path.resolve(__dirname),
@@ -28,6 +27,7 @@ const commonConfig = merge([
     
     parts.loadJavasScript(),
     parts.clean(),
+    parts.setFreeVariable("HELLO", "hello from config"),
 ]);
 
 const cssLoaders = [parts.autoprefix(), parts.tailwind(), parts.sassCSS()];

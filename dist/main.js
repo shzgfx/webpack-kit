@@ -20,7 +20,7 @@
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = ((text = \"Hello world\") => {\n  const element = document.createElement(\"div\");\n  element.className = \"rounded bg-red-100 border max-w-md m-4 p-4\";\n  element.innerHTML = text;\n\n  element.onclick = () => {\n    __webpack_require__.e(/*! import() */ \"src_lazy_js\").then(__webpack_require__.bind(__webpack_require__, /*! ./lazy */ \"./src/lazy.js\")).then(lazy => {\n      element.textContent = lazy.default;\n    }).catch(err => {\n      console.log(err);\n    });\n  };\n\n  return element;\n});\n\n//# sourceURL=webpack://webpack-kit/./src/component.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = ((text = \"hello from config\") => {\n  const element = document.createElement(\"div\");\n  element.className = \"rounded bg-red-100 border max-w-md m-4 p-4\";\n  element.innerHTML = text;\n\n  element.onclick = () => {\n    __webpack_require__.e(/*! import() */ \"src_lazy_js\").then(__webpack_require__.bind(__webpack_require__, /*! ./lazy */ \"./src/lazy.js\")).then(lazy => {\n      element.textContent = lazy.default;\n    }).catch(err => {\n      console.log(err);\n    });\n  };\n\n  return element;\n});\n\n//# sourceURL=webpack://webpack-kit/./src/component.js?");
 
 /***/ }),
 
@@ -49,7 +49,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./component */ \"./src/component.js\");\n/* harmony import */ var _component2__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./component2 */ \"./src/component2.js\");\n/* harmony import */ var _main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./main.scss */ \"./src/main.scss\");\n/* harmony import */ var _main_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_main_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n/* harmony import */ var _shake__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./shake */ \"./src/shake.js\");\n\n\n\n\n\n\ndocument.body.appendChild((0,_component__WEBPACK_IMPORTED_MODULE_3__.default)('Hej co tam'));\ndocument.body.appendChild((0,_component2__WEBPACK_IMPORTED_MODULE_4__.default)('hejahej'));\n(0,_shake__WEBPACK_IMPORTED_MODULE_5__.bake)();\n\n//# sourceURL=webpack://webpack-kit/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./component */ \"./src/component.js\");\n/* harmony import */ var _component2__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./component2 */ \"./src/component2.js\");\n/* harmony import */ var _main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./main.scss */ \"./src/main.scss\");\n/* harmony import */ var _main_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_main_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n/* harmony import */ var _shake__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./shake */ \"./src/shake.js\");\n\n\n\n\n\n\ndocument.body.appendChild((0,_component__WEBPACK_IMPORTED_MODULE_3__.default)());\ndocument.body.appendChild((0,_component2__WEBPACK_IMPORTED_MODULE_4__.default)('hejahej'));\n(0,_shake__WEBPACK_IMPORTED_MODULE_5__.bake)();\n\n//# sourceURL=webpack://webpack-kit/./src/index.js?");
 
 /***/ }),
 
@@ -105,7 +105,7 @@ eval("\n\n/* eslint-env browser */\n\n/*\n  eslint-disable\n  no-console,\n  fun
 /*! runtime requirements: __webpack_require__, module.id, module */
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
-eval("// extracted by mini-css-extract-plugin\n    if(true) {\n      // 1604857896999\n      var cssReload = __webpack_require__(/*! ./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ \"./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js\")(module.id, {\"hmr\":true,\"locals\":false});\n      module.hot.dispose(cssReload);\n      module.hot.accept(undefined, cssReload);\n    }\n  \n\n//# sourceURL=webpack://webpack-kit/./src/main.scss?");
+eval("// extracted by mini-css-extract-plugin\n    if(true) {\n      // 1604862466677\n      var cssReload = __webpack_require__(/*! ./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ \"./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js\")(module.id, {\"hmr\":true,\"locals\":false});\n      module.hot.dispose(cssReload);\n      module.hot.accept(undefined, cssReload);\n    }\n  \n\n//# sourceURL=webpack://webpack-kit/./src/main.scss?");
 
 /***/ }),
 
@@ -579,7 +579,7 @@ eval("\n\nmodule.exports = {\n  isString: function(arg) {\n    return typeof(arg
 /*! runtime requirements: __webpack_require__, __webpack_require__.h, __webpack_require__.* */
 /***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-eval("/*\n  Copyright © 2018 Andrew Powell\n\n  This Source Code Form is subject to the terms of the Mozilla Public\n  License, v. 2.0. If a copy of the MPL was not distributed with this\n  file, You can obtain one at http://mozilla.org/MPL/2.0/.\n\n  The above copyright notice and this permission notice shall be\n  included in all copies or substantial portions of this Source Code Form.\n*/\n\n/**\n * @note This file exists merely as an easy reference for folks adding it to their configuration entries\n */\n\n(() => {\n  /* eslint-disable global-require */\n  const { run } = __webpack_require__(/*! ./lib/client/client */ \"./node_modules/webpack-plugin-serve/lib/client/client.js\");\n  let hash = '<unknown>';\n  let options;\n  try {\n    options = {\"compress\":null,\"headers\":null,\"historyFallback\":false,\"hmr\":true,\"host\":\"localhost\",\"liveReload\":true,\"log\":{\"level\":\"info\",\"prefix\":{\"template\":\"{{level}}\"},\"name\":\"webpack-plugin-serve\"},\"open\":false,\"port\":3000,\"progress\":true,\"ramdisk\":false,\"secure\":false,\"static\":\"./dist\",\"status\":true,\"waitForBuild\":true,\"address\":\"localhost:3000\",\"compilerName\":null,\"wpsId\":\"1123ee7\"};\n  } catch (e) {\n    const { log } = __webpack_require__(/*! ./lib/client/log */ \"./node_modules/webpack-plugin-serve/lib/client/log.js\");\n    log.error(\n      'The entry for webpack-plugin-serve was included in your build, but it does not appear that the plugin was. Please check your configuration.'\n    );\n  }\n\n  try {\n    // eslint-disable-next-line camelcase\n    hash = __webpack_require__.h();\n  } catch (e) {} // eslint-disable-line no-empty\n\n  run(hash, options);\n})();\n\n\n//# sourceURL=webpack://webpack-kit/./node_modules/webpack-plugin-serve/client.js?");
+eval("/*\n  Copyright © 2018 Andrew Powell\n\n  This Source Code Form is subject to the terms of the Mozilla Public\n  License, v. 2.0. If a copy of the MPL was not distributed with this\n  file, You can obtain one at http://mozilla.org/MPL/2.0/.\n\n  The above copyright notice and this permission notice shall be\n  included in all copies or substantial portions of this Source Code Form.\n*/\n\n/**\n * @note This file exists merely as an easy reference for folks adding it to their configuration entries\n */\n\n(() => {\n  /* eslint-disable global-require */\n  const { run } = __webpack_require__(/*! ./lib/client/client */ \"./node_modules/webpack-plugin-serve/lib/client/client.js\");\n  let hash = '<unknown>';\n  let options;\n  try {\n    options = {\"compress\":null,\"headers\":null,\"historyFallback\":false,\"hmr\":true,\"host\":\"localhost\",\"liveReload\":true,\"log\":{\"level\":\"info\",\"prefix\":{\"template\":\"{{level}}\"},\"name\":\"webpack-plugin-serve\"},\"open\":false,\"port\":3000,\"progress\":true,\"ramdisk\":false,\"secure\":false,\"static\":\"./dist\",\"status\":true,\"waitForBuild\":true,\"address\":\"localhost:3000\",\"compilerName\":null,\"wpsId\":\"28cf2e1\"};\n  } catch (e) {\n    const { log } = __webpack_require__(/*! ./lib/client/log */ \"./node_modules/webpack-plugin-serve/lib/client/log.js\");\n    log.error(\n      'The entry for webpack-plugin-serve was included in your build, but it does not appear that the plugin was. Please check your configuration.'\n    );\n  }\n\n  try {\n    // eslint-disable-next-line camelcase\n    hash = __webpack_require__.h();\n  } catch (e) {} // eslint-disable-line no-empty\n\n  run(hash, options);\n})();\n\n\n//# sourceURL=webpack://webpack-kit/./node_modules/webpack-plugin-serve/client.js?");
 
 /***/ }),
 
@@ -779,7 +779,7 @@ eval("/*\n  Copyright © 2018 Andrew Powell\n\n  This Source Code Form is subjec
 /******/ 		// This function allow to reference all chunks
 /******/ 		__webpack_require__.hu = function(chunkId) {
 /******/ 			// return url for filenames based on template
-/******/ 			return "1123ee7-" + chunkId + "-wps-hmr.js";
+/******/ 			return "28cf2e1-" + chunkId + "-wps-hmr.js";
 /******/ 		};
 /******/ 	}();
 /******/ 	
@@ -796,12 +796,12 @@ eval("/*\n  Copyright © 2018 Andrew Powell\n\n  This Source Code Form is subjec
 /******/ 	
 /******/ 	/* webpack/runtime/get update manifest filename */
 /******/ 	!function() {
-/******/ 		__webpack_require__.hmrF = function() { return "1123ee7-wps-hmr.json"; };
+/******/ 		__webpack_require__.hmrF = function() { return "28cf2e1-wps-hmr.json"; };
 /******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	!function() {
-/******/ 		__webpack_require__.h = function() { return "c838e00230b2e8afbbf2"; }
+/******/ 		__webpack_require__.h = function() { return "88841838bed9c3e0383f"; }
 /******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
