@@ -13,7 +13,7 @@ const commonConfig = merge([
         output: {
             path: path.resolve(__dirname, 'dist'),
             filename: '[name].js',
-            //publicPath: 'http://localhost:3000'
+            publicPath: 'http://localhost:3000'
         }
     },
 
