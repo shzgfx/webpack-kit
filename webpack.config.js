@@ -33,6 +33,15 @@ const commonConfig = merge([
 const cssLoaders = [parts.autoprefix(), parts.tailwind(), parts.sassCSS()];
 
 const productionConfig = merge([
+
+    {
+        output: {
+            chunkFilename: "[name].[contenthash:4].js",
+            filename: "[name].[contenthash:4].js",
+            assetModuleFilename: "[name].[contenthash:4][ext][query]"
+        },
+    },
+
     parts.extractCSS( { loaders: cssLoaders }),
     parts.eliminateUnusedCSS(),
     parts.generateSourceMaps({type: 'eval'}),
