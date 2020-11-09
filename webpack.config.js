@@ -55,7 +55,10 @@ const productionConfig = merge([
                         name: 'vendor',
                         chunks: 'initial',
                     }
-                }
+                },
+            },
+            runtimeChunk: {
+                name: "runtime",
             }
         },
     },
@@ -66,6 +69,10 @@ const productionConfig = merge([
             preset: ["default"],
         },
     }),
+    {
+        recordsPath: path.join(__dirname, "records.json"),
+        
+    }
 ]);
 
 const developmentConfig = merge([
