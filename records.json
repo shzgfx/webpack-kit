@@ -1,23 +1,63 @@
 {
   "chunks": {
     "byName": {
+      "another": 21,
+      "app": 143,
       "main": 179,
       "runtime": 666,
       "vendor": 736
     },
     "bySource": {
       "0 ./node_modules/babel-loader/lib/index.js!./src/component.js ./lazy": 34,
+      "0 another": 666,
+      "0 app": 666,
       "0 main": 666,
+      "1 another": 743,
+      "1 app": 736,
       "1 main": 736,
-      "2 main": 179
+      "2 another": 21,
+      "2 app": 743,
+      "2 main": 179,
+      "3 app": 143
     },
     "usedIds": [
+      21,
       34,
-      179,
+      143,
       666,
-      736
+      736,
+      743
     ]
   },
+  "mini-css-extract-plugin C:\\dev\\webpack-kit\\node_modules\\css-loader\\dist\\cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[0].use[2]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[0].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[0].use[4]!./src/main.scss": [
+    {
+      "chunks": {
+        "byName": {
+          "mini-css-extract-plugin": 323
+        },
+        "bySource": {
+          "0 mini-css-extract-plugin": 323
+        },
+        "usedIds": [
+          323
+        ]
+      },
+      "modules": {
+        "byIdentifier": {
+          "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[0].use[2]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[0].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[0].use[4]!./src/main.scss": 22,
+          "./node_modules/css-loader/dist/runtime/api.js": 645,
+          "./node_modules/css-loader/dist/runtime/getUrl.js": 667,
+          "./src/hehe.jpg": 369
+        },
+        "usedIds": [
+          22,
+          369,
+          645,
+          667
+        ]
+      }
+    }
+  ],
   "mini-css-extract-plugin C:\\dev\\webpack-kit\\node_modules\\css-loader\\dist\\cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[2].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[4]!./src/main.scss": [
     {
       "chunks": {
@@ -49,8 +89,14 @@
   ],
   "modules": {
     "byIdentifier": {
+      "./node_modules/babel-loader/lib/index.js!./src/another.js": 27,
+      "./node_modules/babel-loader/lib/index.js!./src/another.js|489ac837d393c5e53ad560377d2a36d0": 909,
+      "./node_modules/babel-loader/lib/index.js!./src/component.js": 248,
+      "./node_modules/babel-loader/lib/index.js!./src/index.js|2b154fdae01462b44297e6a7b6baa498": 359,
       "./node_modules/babel-loader/lib/index.js!./src/index.js|78ca0fecb899164dc5cee1aebb931ddf": 633,
+      "./node_modules/babel-loader/lib/index.js!./src/index.js|ed114b75d565bc31a812efdfbe37adbd": 428,
       "./node_modules/babel-loader/lib/index.js!./src/lazy.js": 34,
+      "./node_modules/mini-css-extract-plugin/dist/loader.js??ruleSet[1].rules[0].use[0]!./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[0].use[2]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[0].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[0].use[4]!./src/main.scss": 370,
       "./node_modules/mini-css-extract-plugin/dist/loader.js??ruleSet[1].rules[2].use[0]!./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[2].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[2].use[4]!./src/main.scss": 326,
       "./node_modules/object-assign/index.js": 418,
       "./node_modules/react-dom/cjs/react-dom.production.min.js": 448,
@@ -61,14 +107,16 @@
       "./node_modules/scheduler/index.js": 840
     },
     "usedIds": [
+      27,
       34,
       53,
+      248,
       294,
-      326,
+      370,
       408,
       418,
+      428,
       448,
-      633,
       840,
       935
     ]

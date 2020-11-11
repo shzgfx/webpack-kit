@@ -15,6 +15,25 @@ const CssMimimizerPlugin = require("css-minimizer-webpack-plugin");
 const ALL_FILES = glob.sync(path.join(__dirname, "src/*.js"));
 const APP_SOURCE = path.join(__dirname, "src");
 
+exports.entry = ({ name, mode, path }) => ({
+    entry:
+      mode === "development"
+        ? { [name]: [path, "webpack-plugin-serve/client"] }
+        : { [name]: path },
+  });
+  
+  exports.page = ({ path = "", template, title, chunks } = {}) => ({
+    plugins: [
+      new MiniHtmlWebpackPlugin({
+        chunks,
+        filename: `${path && path + "/"}index.html`,
+        context: { title },
+        template,
+      }),
+    ],
+  });
+
+
 exports.devServer = () => ({
     watch: true,   
     plugins: [
@@ -29,7 +48,7 @@ exports.devServer = () => ({
     ],
 
 });
-
+/*
 exports.page = ({ title }) => ({
     plugins: [
         new MiniHtmlWebpackPlugin({
@@ -39,7 +58,7 @@ exports.page = ({ title }) => ({
         }),
     ],
 });
-
+*/
 exports.extractCSS = ({ options = {}, loaders = []} = {}) => {
     return {
         module: {
@@ -108,16 +127,16 @@ exports.sassCSS = () => ({
     }
 })
 
-exports.loadImages = ({ include, exclude, options } = {}) => ({
+exports.loadImages = ({ limit } = {}) => ({
     module: {
       rules: [
         {
           test: /\.(png|jpg)$/,
-          include,
-          exclude,
-          use: {
-            loader: "url-loader",
-            options,
+          type: "asset",
+          parser: {
+            dataUrlCondition: {
+                maxSize: limit
+            },
           },
         },
       ],
