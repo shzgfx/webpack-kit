@@ -10,6 +10,8 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const GitRevisionPlugin = require("git-revision-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const CssMimimizerPlugin = require("css-minimizer-webpack-plugin");
+const { ModuleFilenameHelpers } = require("webpack");
+const { ModuleFederationPlugin } = require("webpack").container;
 
 
 const ALL_FILES = glob.sync(path.join(__dirname, "src/*.js"));
@@ -143,18 +145,17 @@ exports.loadImages = ({ limit } = {}) => ({
     },
   });
 
-  exports.loadJavasScript = () => ({
-      module: {
-          rules: [
-              {
-                  test: /\.js$/,
-                  include: APP_SOURCE,
-                  use: "babel-loader",
-              },
-          ],
-      },
+  exports.loadJavaScript = () => ({
+    module: {
+      rules: [
+        {
+          test: /\.js$/,
+          include: APP_SOURCE, // Consider extracting as a parameter
+          use: "babel-loader",
+        },
+      ],
+    },
   });
-
   exports.generateSourceMaps = ({type}) => ({
       devtool: type,
   })
@@ -194,3 +195,21 @@ exports.loadImages = ({ limit } = {}) => ({
           plugins: [new webpack.DefinePlugin(env)],
       }
   }
+
+  exports.federateModule = ({
+      name,
+      filename,
+      exposes,
+      remotes,
+      shared,
+  }) => ({
+      plugins: [
+          new ModuleFederationPlugin({
+              name,
+              filename,
+              exposes,
+              remotes,
+              shared,
+          }),
+      ],
+  });

@@ -6,6 +6,7 @@ const { merge } = require('webpack-merge');
 
 const cssLoaders = [parts.autoprefix(), parts.tailwind(), parts.sassCSS()];
 
+
 const commonConfig = merge([
     {
         //context: path.resolve(__dirname),
