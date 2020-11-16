@@ -29,7 +29,7 @@ const commonConfig = merge([
         },
       }),
     
-    parts.loadJavasScript(),    
+    parts.loadJavaScript(),    
     parts.setFreeVariable("HELLO", "hello from config"),
 ]);
 

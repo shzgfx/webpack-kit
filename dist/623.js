@@ -1,1 +1,0 @@
-(self.webpackChunkwebpack_kit=self.webpackChunkwebpack_kit||[]).push([[623],{623:function(e,t,a){"use strict";a.r(t);var n=a(865),c=a.n(n);t.default=function(){return c().createElement("header",{className:"h-32 flex flex-wrap content-center"},c().createElement("h1",{className:"text-xl"},"Module federation demo"))}}}]);

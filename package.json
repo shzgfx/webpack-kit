@@ -52,7 +52,8 @@
     "webpack-merge": "^5.1.4",
     "webpack-nano": "^1.0.0",
     "webpack-plugin-serve": "^1.0.1",
-    "webpackbar": "^4.0.0"
+    "webpackbar": "^4.0.0",
+    "worker-loader": "^3.0.5"
   },
   "dependencies": {
     "react": "^17.0.1",
