@@ -7,11 +7,11 @@
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
 /******/ (function() { // webpackBootstrap
-/*!****************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js!./src/worker.js ***!
-  \****************************************************************/
+/*!***********************!*\
+  !*** ./src/worker.js ***!
+  \***********************/
 /*! unknown exports (runtime-defined) */
 /*! runtime requirements:  */
-eval("self.onmessage = function (_ref) {\n  var text = _ref.data.text;\n  self.postMessage({\n    text: text + text\n  });\n};\n\n//# sourceURL=webpack://webpack-kit/./src/worker.js?./node_modules/babel-loader/lib/index.js");
+eval("\r\n\r\nself.onmessage = ({ data: { text } }) => {\r\n    self.postMessage({text: text + text});\r\n}\n\n//# sourceURL=webpack://webpack-kit/./src/worker.js?");
 /******/ })()
 ;
