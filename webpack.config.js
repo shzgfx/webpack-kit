@@ -15,7 +15,7 @@ const commonConfig = merge([
         output: {
             path: path.resolve(process.cwd(), "dist"),
             
-            publicPath: "/",
+            publicPath: "/webpack-kit/",
         }
     },
 

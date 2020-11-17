@@ -12,7 +12,8 @@
     "start:mf": "wp --config webpack.mf.js --mode development",
     "build:i18n": "wp --config webpack.i18n.js",
     "test:mocha": "mocha test",
-    "test:mocha:watch": "wp --config webpack.mocha.js"
+    "test:mocha:watch": "wp --config webpack.mocha.js",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",

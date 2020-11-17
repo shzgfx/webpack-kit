@@ -2,7 +2,7 @@
   "chunks": {
     "byName": {
       "another": 21,
-      "app": 143,
+      "app": 743,
       "main": 179,
       "runtime": 666,
       "vendor": 736
@@ -21,9 +21,6 @@
       "3 app": 143
     },
     "usedIds": [
-      21,
-      34,
-      143,
       666,
       736,
       743
@@ -94,6 +91,7 @@
       "./node_modules/babel-loader/lib/index.js!./src/component.js": 248,
       "./node_modules/babel-loader/lib/index.js!./src/index.js|2b154fdae01462b44297e6a7b6baa498": 359,
       "./node_modules/babel-loader/lib/index.js!./src/index.js|78ca0fecb899164dc5cee1aebb931ddf": 633,
+      "./node_modules/babel-loader/lib/index.js!./src/index.js|d52aee6e9698a03745dca0c9362af460": 926,
       "./node_modules/babel-loader/lib/index.js!./src/index.js|ed114b75d565bc31a812efdfbe37adbd": 428,
       "./node_modules/babel-loader/lib/index.js!./src/lazy.js": 34,
       "./node_modules/mini-css-extract-plugin/dist/loader.js??ruleSet[1].rules[0].use[0]!./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[0].use[2]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[0].use[3]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[0].use[4]!./src/main.scss": 370,
@@ -107,18 +105,39 @@
       "./node_modules/scheduler/index.js": 840
     },
     "usedIds": [
-      27,
-      34,
       53,
       248,
       294,
       370,
       408,
       418,
-      428,
       448,
       840,
+      926,
       935
     ]
-  }
+  },
+  "worker-loader C:\\dev\\webpack-kit\\node_modules\\babel-loader\\lib\\index.js!./src/worker.js": [
+    {
+      "chunks": {
+        "byName": {
+          "worker": 348
+        },
+        "bySource": {
+          "0 worker": 348
+        },
+        "usedIds": [
+          348
+        ]
+      },
+      "modules": {
+        "byIdentifier": {
+          "./node_modules/babel-loader/lib/index.js!./src/worker.js": 602
+        },
+        "usedIds": [
+          602
+        ]
+      }
+    }
+  ]
 }
