@@ -8,6 +8,14 @@ const cssLoaders = [parts.autoprefix(), parts.tailwind(), parts.sassCSS()];
 
 
 const commonConfig = merge([
+
+    {
+      resolveLoader: {
+        alias: {
+          "demo-loader": path.resolve(__dirname, "loaders/demo-loader.js")
+        },
+      },
+    },
     {
         //context: path.resolve(__dirname),
         //devtool: 'source-map',

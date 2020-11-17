@@ -1,5 +1,5 @@
 import Worker from "worker-loader!./worker";
-
+import "!demo-loader?name=foo!./main.scss";
 
 export default () => {
 
